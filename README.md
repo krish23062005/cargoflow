@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CargoFlow
 
-## Getting Started
+Fleet tracking, shipment management and route planning for African logistics — built as an 18-episode video series. Multi-tenant (organizations → members → drivers/vehicles), with a live tracking dashboard, driver PWA (works offline), customer portal, and reports.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Concern | Choice |
+|---------|--------|
+| Framework | Next.js 16 (App Router, Turbopack) |
+| Language / Styling | TypeScript · Tailwind CSS 4 · shadcn/ui |
+| API | tRPC 11 (server + React Query client) |
+| ORM / DB | Prisma 7 · PostgreSQL (Neon) |
+| Auth | Better Auth (email/password + organization plugin) |
+| Maps / Real-time | Leaflet + OpenStreetMap · Server-Sent Events |
+| Offline | Hand-rolled service worker + IndexedDB mutation queue |
+
+## Prerequisites
+
+- Node.js 20+
+- A PostgreSQL database (this repo targets Neon, but any Postgres works via the Prisma adapter)
+
+## Environment Variables
+
+Create a `.env` in the project root:
+
+```env
+# Required
+DATABASE_URL=postgresql://user:pass@host:5432/cargoflow
+
+# Better Auth (used as fallback POD-verify secret when POD_VERIFY_SECRET is unset)
+BETTER_AUTH_SECRET=generate-a-long-random-string
+BETTER_AUTH_URL=http://localhost:3000
+
+# Optional
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+OSRM_BASE_URL=https://router.project-osrm.org
+POD_VERIFY_SECRET=some-secret
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npx prisma generate          # generate the typed client into src/generated/prisma
+npx prisma migrate deploy    # apply the SQL migrations (or `db push` on a throwaway DB)
+node prisma/seed.js          # optional demo data
+npm run dev                  # http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Production build: `npm run build && npm start`.
 
-## Learn More
+## Scripts
 
-To learn more about Next.js, take a look at the following resources:
+| Command | Purpose |
+|---------|---------|
+| `npm run dev` | Next dev server (Turbopack) |
+| `npm run build` | Production build |
+| `npm start` | Serve the production build |
+| `npm run lint` | ESLint |
+| `npx prisma migrate diff --from-config-datasource --to-schema prisma/schema.prisma --script` | Generate SQL for additive schema changes (then apply via `prisma db execute`) |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key Flows
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Organizations & members** — Better Auth organization plugin; roles `owner > admin > dispatcher > viewer`; permission matrix in `src/lib/constants/permissions.ts`; every tenant-scoped query goes through the `orgProcedure` middleware.
+- **Shipments & routes** — forward-only status transitions (`PENDING_PICKUP → PICKED_UP → IN_TRANSIT → AT_CHECKPOINT → DELIVERED`), every mutation audit-logged.
+- **Live tracking** — driver PWA posts GPS points to `/api/tracking/ingest`; the dashboard subscribes to `/api/sse/tracking`; ETA is computed from route waypoints.
+- **Driver PWA** — separate lightweight driver session (phone + PIN). Offline-capable: status actions, issue reports and POD captures are queued in IndexedDB (`src/lib/offline`) and replayed FIFO on reconnect (last-write-wins; 409s are treated as already-applied). App shell + driver GET APIs are cached by `public/driver-sw.js`.
+- **Customer portal** — public tracking by tracking number with IP-based anti-scrape rate limiting.
+- **Reports** — six aggregation queries behind `report.view` (fleet utilization, delivery performance, driver scorecard, cost analysis, shipment summary).
 
-## Deploy on Vercel
+## Health & Security
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `GET /api/health` — liveness/readiness probe (pings Postgres, returns 200/503).
+- Security headers (CSP, `X-Frame-Options: DENY`, etc.) are applied globally in `next.config.ts`; CORS is intentionally same-origin.
+- Rate limiting: Better Auth sign-in attempts, tRPC per-IP ceiling, portal per-(IP, tracking) window.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deferred Integrations
+
+Email/SMS delivery (Resend, Africa's Talking), object storage (Cloudflare R2), PDF export (Trigger.dev), product analytics (PostHog), error tracking (Sentry), distributed rate limiting (Upstash Redis) — all deferred; code paths exist and log/fall back safely.
+
+## Docs
+
+The full build plan and decision log lives in [`PLAN.md`](./PLAN.md).

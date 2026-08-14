@@ -1,0 +1,39 @@
+{
+  "id": "cargoflow-driver",
+  "name": "CargoFlow Driver",
+  "short_name": "CargoFlow",
+  "description": "Driver companion app for CargoFlow - view your today's trip, report issues and share live location.",
+  "start_url": "/driver/login",
+  "scope": "/driver",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "categories": ["business", "productivity", "navigation"],
+  "icons": [
+    {
+      "src": "/driver-icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/driver-icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/driver-icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/driver-icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
