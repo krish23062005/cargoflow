@@ -84,10 +84,22 @@ export default function CreateOrganizationPage() {
   }, [country, setValue]);
 
   async function onSubmit(values: CreateOrgInput) {
+    const slug = values.slug?.trim() || slugify(values.name);
+
+    const { error: slugCheckError } = await authClient.organization.checkSlug({ slug });
+    if (slugCheckError && slugCheckError.code === "ORGANIZATION_SLUG_ALREADY_TAKEN") {
+      setError("slug", { type: "manual", message: "This slug is already taken. Edit it above." });
+      return;
+    }
+    if (slugCheckError) {
+      toast.error(slugCheckError.message ?? "Unable to verify slug");
+      return;
+    }
+
     setLoading(true);
     const { data, error } = await authClient.organization.create({
       name: values.name,
-      slug: values.slug ?? slugify(values.name),
+      slug,
       country: values.country,
       currency: values.currency,
       timezone: values.timezone,
@@ -96,7 +108,7 @@ export default function CreateOrganizationPage() {
     setLoading(false);
 
     if (error) {
-      if (error.status === 400 && error.code === "ORGANIZATION_SLUG_ALREADY_TAKEN") {
+      if (error.status === 400 && error.code === "ORGANIZATION_ALREADY_EXISTS") {
         setError("slug", { type: "manual", message: "This slug is already taken. Edit it above." });
       } else {
         toast.error(error.message ?? "Failed to create organization");
