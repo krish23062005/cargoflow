@@ -280,8 +280,8 @@ export type TrackingPointWhereInput = {
   source?: Prisma.StringFilter<"TrackingPoint"> | string
   recordedAt?: Prisma.DateTimeFilter<"TrackingPoint"> | Date | string
   createdAt?: Prisma.DateTimeFilter<"TrackingPoint"> | Date | string
-  vehicle?: Prisma.XOR<Prisma.VehicleScalarRelationFilter, Prisma.VehicleWhereInput>
   organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
+  vehicle?: Prisma.XOR<Prisma.VehicleScalarRelationFilter, Prisma.VehicleWhereInput>
 }
 
 export type TrackingPointOrderByWithRelationInput = {
@@ -296,8 +296,8 @@ export type TrackingPointOrderByWithRelationInput = {
   source?: Prisma.SortOrder
   recordedAt?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
-  vehicle?: Prisma.VehicleOrderByWithRelationInput
   organization?: Prisma.OrganizationOrderByWithRelationInput
+  vehicle?: Prisma.VehicleOrderByWithRelationInput
 }
 
 export type TrackingPointWhereUniqueInput = Prisma.AtLeast<{
@@ -315,8 +315,8 @@ export type TrackingPointWhereUniqueInput = Prisma.AtLeast<{
   source?: Prisma.StringFilter<"TrackingPoint"> | string
   recordedAt?: Prisma.DateTimeFilter<"TrackingPoint"> | Date | string
   createdAt?: Prisma.DateTimeFilter<"TrackingPoint"> | Date | string
-  vehicle?: Prisma.XOR<Prisma.VehicleScalarRelationFilter, Prisma.VehicleWhereInput>
   organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
+  vehicle?: Prisma.XOR<Prisma.VehicleScalarRelationFilter, Prisma.VehicleWhereInput>
 }, "id">
 
 export type TrackingPointOrderByWithAggregationInput = {
@@ -365,8 +365,8 @@ export type TrackingPointCreateInput = {
   source?: string
   recordedAt?: Date | string
   createdAt?: Date | string
-  vehicle: Prisma.VehicleCreateNestedOneWithoutTrackingInput
   organization: Prisma.OrganizationCreateNestedOneWithoutTrackingInput
+  vehicle: Prisma.VehicleCreateNestedOneWithoutTrackingInput
 }
 
 export type TrackingPointUncheckedCreateInput = {
@@ -393,8 +393,8 @@ export type TrackingPointUpdateInput = {
   source?: Prisma.StringFieldUpdateOperationsInput | string
   recordedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  vehicle?: Prisma.VehicleUpdateOneRequiredWithoutTrackingNestedInput
   organization?: Prisma.OrganizationUpdateOneRequiredWithoutTrackingNestedInput
+  vehicle?: Prisma.VehicleUpdateOneRequiredWithoutTrackingNestedInput
 }
 
 export type TrackingPointUncheckedUpdateInput = {
@@ -850,8 +850,8 @@ export type TrackingPointSelect<ExtArgs extends runtime.Types.Extensions.Interna
   source?: boolean
   recordedAt?: boolean
   createdAt?: boolean
-  vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["trackingPoint"]>
 
 export type TrackingPointSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -866,8 +866,8 @@ export type TrackingPointSelectCreateManyAndReturn<ExtArgs extends runtime.Types
   source?: boolean
   recordedAt?: boolean
   createdAt?: boolean
-  vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["trackingPoint"]>
 
 export type TrackingPointSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -882,8 +882,8 @@ export type TrackingPointSelectUpdateManyAndReturn<ExtArgs extends runtime.Types
   source?: boolean
   recordedAt?: boolean
   createdAt?: boolean
-  vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["trackingPoint"]>
 
 export type TrackingPointSelectScalar = {
@@ -902,23 +902,23 @@ export type TrackingPointSelectScalar = {
 
 export type TrackingPointOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "organizationId" | "vehicleId" | "lat" | "lng" | "speedKmh" | "headingDeg" | "accuracyM" | "source" | "recordedAt" | "createdAt", ExtArgs["result"]["trackingPoint"]>
 export type TrackingPointInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
 }
 export type TrackingPointIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
 }
 export type TrackingPointIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
 }
 
 export type $TrackingPointPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "TrackingPoint"
   objects: {
-    vehicle: Prisma.$VehiclePayload<ExtArgs>
     organization: Prisma.$OrganizationPayload<ExtArgs>
+    vehicle: Prisma.$VehiclePayload<ExtArgs>
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1326,8 +1326,8 @@ readonly fields: TrackingPointFieldRefs;
  */
 export interface Prisma__TrackingPointClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  vehicle<T extends Prisma.VehicleDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.VehicleDefaultArgs<ExtArgs>>): Prisma.Prisma__VehicleClient<runtime.Types.Result.GetResult<Prisma.$VehiclePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   organization<T extends Prisma.OrganizationDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.OrganizationDefaultArgs<ExtArgs>>): Prisma.Prisma__OrganizationClient<runtime.Types.Result.GetResult<Prisma.$OrganizationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  vehicle<T extends Prisma.VehicleDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.VehicleDefaultArgs<ExtArgs>>): Prisma.Prisma__VehicleClient<runtime.Types.Result.GetResult<Prisma.$VehiclePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.

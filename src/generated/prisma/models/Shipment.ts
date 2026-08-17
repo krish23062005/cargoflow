@@ -420,12 +420,12 @@ export type ShipmentWhereInput = {
   createdAt?: Prisma.DateTimeFilter<"Shipment"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Shipment"> | Date | string
   routeId?: Prisma.StringNullableFilter<"Shipment"> | string | null
-  organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
-  events?: Prisma.ShipmentEventListRelationFilter
+  etaPredictions?: Prisma.EtaPredictionListRelationFilter
   proofs?: Prisma.ProofOfDeliveryListRelationFilter
   assignment?: Prisma.XOR<Prisma.VehicleAssignmentNullableScalarRelationFilter, Prisma.VehicleAssignmentWhereInput> | null
+  organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
   route?: Prisma.XOR<Prisma.RouteNullableScalarRelationFilter, Prisma.RouteWhereInput> | null
-  etaPredictions?: Prisma.EtaPredictionListRelationFilter
+  events?: Prisma.ShipmentEventListRelationFilter
 }
 
 export type ShipmentOrderByWithRelationInput = {
@@ -457,12 +457,12 @@ export type ShipmentOrderByWithRelationInput = {
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   routeId?: Prisma.SortOrderInput | Prisma.SortOrder
-  organization?: Prisma.OrganizationOrderByWithRelationInput
-  events?: Prisma.ShipmentEventOrderByRelationAggregateInput
+  etaPredictions?: Prisma.EtaPredictionOrderByRelationAggregateInput
   proofs?: Prisma.ProofOfDeliveryOrderByRelationAggregateInput
   assignment?: Prisma.VehicleAssignmentOrderByWithRelationInput
+  organization?: Prisma.OrganizationOrderByWithRelationInput
   route?: Prisma.RouteOrderByWithRelationInput
-  etaPredictions?: Prisma.EtaPredictionOrderByRelationAggregateInput
+  events?: Prisma.ShipmentEventOrderByRelationAggregateInput
 }
 
 export type ShipmentWhereUniqueInput = Prisma.AtLeast<{
@@ -497,12 +497,12 @@ export type ShipmentWhereUniqueInput = Prisma.AtLeast<{
   assignmentId?: Prisma.StringNullableFilter<"Shipment"> | string | null
   createdAt?: Prisma.DateTimeFilter<"Shipment"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Shipment"> | Date | string
-  organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
-  events?: Prisma.ShipmentEventListRelationFilter
+  etaPredictions?: Prisma.EtaPredictionListRelationFilter
   proofs?: Prisma.ProofOfDeliveryListRelationFilter
   assignment?: Prisma.XOR<Prisma.VehicleAssignmentNullableScalarRelationFilter, Prisma.VehicleAssignmentWhereInput> | null
+  organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
   route?: Prisma.XOR<Prisma.RouteNullableScalarRelationFilter, Prisma.RouteWhereInput> | null
-  etaPredictions?: Prisma.EtaPredictionListRelationFilter
+  events?: Prisma.ShipmentEventListRelationFilter
 }, "id" | "trackingNumber" | "routeId">
 
 export type ShipmentOrderByWithAggregationInput = {
@@ -601,12 +601,12 @@ export type ShipmentCreateInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  organization: Prisma.OrganizationCreateNestedOneWithoutShipmentsInput
-  events?: Prisma.ShipmentEventCreateNestedManyWithoutShipmentInput
+  etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutShipmentInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutShipmentInput
   assignment?: Prisma.VehicleAssignmentCreateNestedOneWithoutShipmentsInput
+  organization: Prisma.OrganizationCreateNestedOneWithoutShipmentsInput
   route?: Prisma.RouteCreateNestedOneWithoutShipmentInput
-  etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutShipmentInput
+  events?: Prisma.ShipmentEventCreateNestedManyWithoutShipmentInput
 }
 
 export type ShipmentUncheckedCreateInput = {
@@ -638,9 +638,9 @@ export type ShipmentUncheckedCreateInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   routeId?: string | null
-  events?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutShipmentInput
-  proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutShipmentInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutShipmentInput
+  proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutShipmentInput
+  events?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutShipmentInput
 }
 
 export type ShipmentUpdateInput = {
@@ -669,12 +669,12 @@ export type ShipmentUpdateInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  organization?: Prisma.OrganizationUpdateOneRequiredWithoutShipmentsNestedInput
-  events?: Prisma.ShipmentEventUpdateManyWithoutShipmentNestedInput
+  etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutShipmentNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutShipmentNestedInput
   assignment?: Prisma.VehicleAssignmentUpdateOneWithoutShipmentsNestedInput
+  organization?: Prisma.OrganizationUpdateOneRequiredWithoutShipmentsNestedInput
   route?: Prisma.RouteUpdateOneWithoutShipmentNestedInput
-  etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutShipmentNestedInput
+  events?: Prisma.ShipmentEventUpdateManyWithoutShipmentNestedInput
 }
 
 export type ShipmentUncheckedUpdateInput = {
@@ -706,9 +706,9 @@ export type ShipmentUncheckedUpdateInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   routeId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  events?: Prisma.ShipmentEventUncheckedUpdateManyWithoutShipmentNestedInput
-  proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutShipmentNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutShipmentNestedInput
+  proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutShipmentNestedInput
+  events?: Prisma.ShipmentEventUncheckedUpdateManyWithoutShipmentNestedInput
 }
 
 export type ShipmentCreateManyInput = {
@@ -1116,11 +1116,11 @@ export type ShipmentCreateWithoutOrganizationInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  events?: Prisma.ShipmentEventCreateNestedManyWithoutShipmentInput
+  etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutShipmentInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutShipmentInput
   assignment?: Prisma.VehicleAssignmentCreateNestedOneWithoutShipmentsInput
   route?: Prisma.RouteCreateNestedOneWithoutShipmentInput
-  etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutShipmentInput
+  events?: Prisma.ShipmentEventCreateNestedManyWithoutShipmentInput
 }
 
 export type ShipmentUncheckedCreateWithoutOrganizationInput = {
@@ -1151,9 +1151,9 @@ export type ShipmentUncheckedCreateWithoutOrganizationInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   routeId?: string | null
-  events?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutShipmentInput
-  proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutShipmentInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutShipmentInput
+  proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutShipmentInput
+  events?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutShipmentInput
 }
 
 export type ShipmentCreateOrConnectWithoutOrganizationInput = {
@@ -1242,11 +1242,11 @@ export type ShipmentCreateWithoutAssignmentInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  organization: Prisma.OrganizationCreateNestedOneWithoutShipmentsInput
-  events?: Prisma.ShipmentEventCreateNestedManyWithoutShipmentInput
-  proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutShipmentInput
-  route?: Prisma.RouteCreateNestedOneWithoutShipmentInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutShipmentInput
+  proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutShipmentInput
+  organization: Prisma.OrganizationCreateNestedOneWithoutShipmentsInput
+  route?: Prisma.RouteCreateNestedOneWithoutShipmentInput
+  events?: Prisma.ShipmentEventCreateNestedManyWithoutShipmentInput
 }
 
 export type ShipmentUncheckedCreateWithoutAssignmentInput = {
@@ -1277,9 +1277,9 @@ export type ShipmentUncheckedCreateWithoutAssignmentInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   routeId?: string | null
-  events?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutShipmentInput
-  proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutShipmentInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutShipmentInput
+  proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutShipmentInput
+  events?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutShipmentInput
 }
 
 export type ShipmentCreateOrConnectWithoutAssignmentInput = {
@@ -1334,11 +1334,11 @@ export type ShipmentCreateWithoutEventsInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  organization: Prisma.OrganizationCreateNestedOneWithoutShipmentsInput
+  etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutShipmentInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutShipmentInput
   assignment?: Prisma.VehicleAssignmentCreateNestedOneWithoutShipmentsInput
+  organization: Prisma.OrganizationCreateNestedOneWithoutShipmentsInput
   route?: Prisma.RouteCreateNestedOneWithoutShipmentInput
-  etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutShipmentInput
 }
 
 export type ShipmentUncheckedCreateWithoutEventsInput = {
@@ -1370,8 +1370,8 @@ export type ShipmentUncheckedCreateWithoutEventsInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   routeId?: string | null
-  proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutShipmentInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutShipmentInput
+  proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutShipmentInput
 }
 
 export type ShipmentCreateOrConnectWithoutEventsInput = {
@@ -1416,11 +1416,11 @@ export type ShipmentUpdateWithoutEventsInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  organization?: Prisma.OrganizationUpdateOneRequiredWithoutShipmentsNestedInput
+  etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutShipmentNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutShipmentNestedInput
   assignment?: Prisma.VehicleAssignmentUpdateOneWithoutShipmentsNestedInput
+  organization?: Prisma.OrganizationUpdateOneRequiredWithoutShipmentsNestedInput
   route?: Prisma.RouteUpdateOneWithoutShipmentNestedInput
-  etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutShipmentNestedInput
 }
 
 export type ShipmentUncheckedUpdateWithoutEventsInput = {
@@ -1452,8 +1452,8 @@ export type ShipmentUncheckedUpdateWithoutEventsInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   routeId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutShipmentNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutShipmentNestedInput
+  proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutShipmentNestedInput
 }
 
 export type ShipmentCreateWithoutRouteInput = {
@@ -1482,11 +1482,11 @@ export type ShipmentCreateWithoutRouteInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  organization: Prisma.OrganizationCreateNestedOneWithoutShipmentsInput
-  events?: Prisma.ShipmentEventCreateNestedManyWithoutShipmentInput
+  etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutShipmentInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutShipmentInput
   assignment?: Prisma.VehicleAssignmentCreateNestedOneWithoutShipmentsInput
-  etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutShipmentInput
+  organization: Prisma.OrganizationCreateNestedOneWithoutShipmentsInput
+  events?: Prisma.ShipmentEventCreateNestedManyWithoutShipmentInput
 }
 
 export type ShipmentUncheckedCreateWithoutRouteInput = {
@@ -1517,9 +1517,9 @@ export type ShipmentUncheckedCreateWithoutRouteInput = {
   assignmentId?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  events?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutShipmentInput
-  proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutShipmentInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutShipmentInput
+  proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutShipmentInput
+  events?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutShipmentInput
 }
 
 export type ShipmentCreateOrConnectWithoutRouteInput = {
@@ -1564,11 +1564,11 @@ export type ShipmentUpdateWithoutRouteInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  organization?: Prisma.OrganizationUpdateOneRequiredWithoutShipmentsNestedInput
-  events?: Prisma.ShipmentEventUpdateManyWithoutShipmentNestedInput
+  etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutShipmentNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutShipmentNestedInput
   assignment?: Prisma.VehicleAssignmentUpdateOneWithoutShipmentsNestedInput
-  etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutShipmentNestedInput
+  organization?: Prisma.OrganizationUpdateOneRequiredWithoutShipmentsNestedInput
+  events?: Prisma.ShipmentEventUpdateManyWithoutShipmentNestedInput
 }
 
 export type ShipmentUncheckedUpdateWithoutRouteInput = {
@@ -1599,9 +1599,9 @@ export type ShipmentUncheckedUpdateWithoutRouteInput = {
   assignmentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  events?: Prisma.ShipmentEventUncheckedUpdateManyWithoutShipmentNestedInput
-  proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutShipmentNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutShipmentNestedInput
+  proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutShipmentNestedInput
+  events?: Prisma.ShipmentEventUncheckedUpdateManyWithoutShipmentNestedInput
 }
 
 export type ShipmentCreateWithoutEtaPredictionsInput = {
@@ -1630,11 +1630,11 @@ export type ShipmentCreateWithoutEtaPredictionsInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  organization: Prisma.OrganizationCreateNestedOneWithoutShipmentsInput
-  events?: Prisma.ShipmentEventCreateNestedManyWithoutShipmentInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutShipmentInput
   assignment?: Prisma.VehicleAssignmentCreateNestedOneWithoutShipmentsInput
+  organization: Prisma.OrganizationCreateNestedOneWithoutShipmentsInput
   route?: Prisma.RouteCreateNestedOneWithoutShipmentInput
+  events?: Prisma.ShipmentEventCreateNestedManyWithoutShipmentInput
 }
 
 export type ShipmentUncheckedCreateWithoutEtaPredictionsInput = {
@@ -1666,8 +1666,8 @@ export type ShipmentUncheckedCreateWithoutEtaPredictionsInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   routeId?: string | null
-  events?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutShipmentInput
   proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutShipmentInput
+  events?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutShipmentInput
 }
 
 export type ShipmentCreateOrConnectWithoutEtaPredictionsInput = {
@@ -1712,11 +1712,11 @@ export type ShipmentUpdateWithoutEtaPredictionsInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  organization?: Prisma.OrganizationUpdateOneRequiredWithoutShipmentsNestedInput
-  events?: Prisma.ShipmentEventUpdateManyWithoutShipmentNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutShipmentNestedInput
   assignment?: Prisma.VehicleAssignmentUpdateOneWithoutShipmentsNestedInput
+  organization?: Prisma.OrganizationUpdateOneRequiredWithoutShipmentsNestedInput
   route?: Prisma.RouteUpdateOneWithoutShipmentNestedInput
+  events?: Prisma.ShipmentEventUpdateManyWithoutShipmentNestedInput
 }
 
 export type ShipmentUncheckedUpdateWithoutEtaPredictionsInput = {
@@ -1748,8 +1748,8 @@ export type ShipmentUncheckedUpdateWithoutEtaPredictionsInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   routeId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  events?: Prisma.ShipmentEventUncheckedUpdateManyWithoutShipmentNestedInput
   proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutShipmentNestedInput
+  events?: Prisma.ShipmentEventUncheckedUpdateManyWithoutShipmentNestedInput
 }
 
 export type ShipmentCreateWithoutProofsInput = {
@@ -1778,11 +1778,11 @@ export type ShipmentCreateWithoutProofsInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  organization: Prisma.OrganizationCreateNestedOneWithoutShipmentsInput
-  events?: Prisma.ShipmentEventCreateNestedManyWithoutShipmentInput
-  assignment?: Prisma.VehicleAssignmentCreateNestedOneWithoutShipmentsInput
-  route?: Prisma.RouteCreateNestedOneWithoutShipmentInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutShipmentInput
+  assignment?: Prisma.VehicleAssignmentCreateNestedOneWithoutShipmentsInput
+  organization: Prisma.OrganizationCreateNestedOneWithoutShipmentsInput
+  route?: Prisma.RouteCreateNestedOneWithoutShipmentInput
+  events?: Prisma.ShipmentEventCreateNestedManyWithoutShipmentInput
 }
 
 export type ShipmentUncheckedCreateWithoutProofsInput = {
@@ -1814,8 +1814,8 @@ export type ShipmentUncheckedCreateWithoutProofsInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   routeId?: string | null
-  events?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutShipmentInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutShipmentInput
+  events?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutShipmentInput
 }
 
 export type ShipmentCreateOrConnectWithoutProofsInput = {
@@ -1860,11 +1860,11 @@ export type ShipmentUpdateWithoutProofsInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  organization?: Prisma.OrganizationUpdateOneRequiredWithoutShipmentsNestedInput
-  events?: Prisma.ShipmentEventUpdateManyWithoutShipmentNestedInput
-  assignment?: Prisma.VehicleAssignmentUpdateOneWithoutShipmentsNestedInput
-  route?: Prisma.RouteUpdateOneWithoutShipmentNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutShipmentNestedInput
+  assignment?: Prisma.VehicleAssignmentUpdateOneWithoutShipmentsNestedInput
+  organization?: Prisma.OrganizationUpdateOneRequiredWithoutShipmentsNestedInput
+  route?: Prisma.RouteUpdateOneWithoutShipmentNestedInput
+  events?: Prisma.ShipmentEventUpdateManyWithoutShipmentNestedInput
 }
 
 export type ShipmentUncheckedUpdateWithoutProofsInput = {
@@ -1896,8 +1896,8 @@ export type ShipmentUncheckedUpdateWithoutProofsInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   routeId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  events?: Prisma.ShipmentEventUncheckedUpdateManyWithoutShipmentNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutShipmentNestedInput
+  events?: Prisma.ShipmentEventUncheckedUpdateManyWithoutShipmentNestedInput
 }
 
 export type ShipmentCreateManyOrganizationInput = {
@@ -1956,11 +1956,11 @@ export type ShipmentUpdateWithoutOrganizationInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  events?: Prisma.ShipmentEventUpdateManyWithoutShipmentNestedInput
+  etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutShipmentNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutShipmentNestedInput
   assignment?: Prisma.VehicleAssignmentUpdateOneWithoutShipmentsNestedInput
   route?: Prisma.RouteUpdateOneWithoutShipmentNestedInput
-  etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutShipmentNestedInput
+  events?: Prisma.ShipmentEventUpdateManyWithoutShipmentNestedInput
 }
 
 export type ShipmentUncheckedUpdateWithoutOrganizationInput = {
@@ -1991,9 +1991,9 @@ export type ShipmentUncheckedUpdateWithoutOrganizationInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   routeId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  events?: Prisma.ShipmentEventUncheckedUpdateManyWithoutShipmentNestedInput
-  proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutShipmentNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutShipmentNestedInput
+  proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutShipmentNestedInput
+  events?: Prisma.ShipmentEventUncheckedUpdateManyWithoutShipmentNestedInput
 }
 
 export type ShipmentUncheckedUpdateManyWithoutOrganizationInput = {
@@ -2082,11 +2082,11 @@ export type ShipmentUpdateWithoutAssignmentInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  organization?: Prisma.OrganizationUpdateOneRequiredWithoutShipmentsNestedInput
-  events?: Prisma.ShipmentEventUpdateManyWithoutShipmentNestedInput
-  proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutShipmentNestedInput
-  route?: Prisma.RouteUpdateOneWithoutShipmentNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutShipmentNestedInput
+  proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutShipmentNestedInput
+  organization?: Prisma.OrganizationUpdateOneRequiredWithoutShipmentsNestedInput
+  route?: Prisma.RouteUpdateOneWithoutShipmentNestedInput
+  events?: Prisma.ShipmentEventUpdateManyWithoutShipmentNestedInput
 }
 
 export type ShipmentUncheckedUpdateWithoutAssignmentInput = {
@@ -2117,9 +2117,9 @@ export type ShipmentUncheckedUpdateWithoutAssignmentInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   routeId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  events?: Prisma.ShipmentEventUncheckedUpdateManyWithoutShipmentNestedInput
-  proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutShipmentNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutShipmentNestedInput
+  proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutShipmentNestedInput
+  events?: Prisma.ShipmentEventUncheckedUpdateManyWithoutShipmentNestedInput
 }
 
 export type ShipmentUncheckedUpdateManyWithoutAssignmentInput = {
@@ -2158,15 +2158,15 @@ export type ShipmentUncheckedUpdateManyWithoutAssignmentInput = {
  */
 
 export type ShipmentCountOutputType = {
-  events: number
-  proofs: number
   etaPredictions: number
+  proofs: number
+  events: number
 }
 
 export type ShipmentCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  events?: boolean | ShipmentCountOutputTypeCountEventsArgs
-  proofs?: boolean | ShipmentCountOutputTypeCountProofsArgs
   etaPredictions?: boolean | ShipmentCountOutputTypeCountEtaPredictionsArgs
+  proofs?: boolean | ShipmentCountOutputTypeCountProofsArgs
+  events?: boolean | ShipmentCountOutputTypeCountEventsArgs
 }
 
 /**
@@ -2182,8 +2182,8 @@ export type ShipmentCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Ext
 /**
  * ShipmentCountOutputType without action
  */
-export type ShipmentCountOutputTypeCountEventsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.ShipmentEventWhereInput
+export type ShipmentCountOutputTypeCountEtaPredictionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.EtaPredictionWhereInput
 }
 
 /**
@@ -2196,8 +2196,8 @@ export type ShipmentCountOutputTypeCountProofsArgs<ExtArgs extends runtime.Types
 /**
  * ShipmentCountOutputType without action
  */
-export type ShipmentCountOutputTypeCountEtaPredictionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.EtaPredictionWhereInput
+export type ShipmentCountOutputTypeCountEventsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.ShipmentEventWhereInput
 }
 
 
@@ -2230,12 +2230,12 @@ export type ShipmentSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs
   createdAt?: boolean
   updatedAt?: boolean
   routeId?: boolean
-  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
-  events?: boolean | Prisma.Shipment$eventsArgs<ExtArgs>
+  etaPredictions?: boolean | Prisma.Shipment$etaPredictionsArgs<ExtArgs>
   proofs?: boolean | Prisma.Shipment$proofsArgs<ExtArgs>
   assignment?: boolean | Prisma.Shipment$assignmentArgs<ExtArgs>
+  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   route?: boolean | Prisma.Shipment$routeArgs<ExtArgs>
-  etaPredictions?: boolean | Prisma.Shipment$etaPredictionsArgs<ExtArgs>
+  events?: boolean | Prisma.Shipment$eventsArgs<ExtArgs>
   _count?: boolean | Prisma.ShipmentCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["shipment"]>
 
@@ -2268,8 +2268,8 @@ export type ShipmentSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exte
   createdAt?: boolean
   updatedAt?: boolean
   routeId?: boolean
-  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   assignment?: boolean | Prisma.Shipment$assignmentArgs<ExtArgs>
+  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   route?: boolean | Prisma.Shipment$routeArgs<ExtArgs>
 }, ExtArgs["result"]["shipment"]>
 
@@ -2302,8 +2302,8 @@ export type ShipmentSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exte
   createdAt?: boolean
   updatedAt?: boolean
   routeId?: boolean
-  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   assignment?: boolean | Prisma.Shipment$assignmentArgs<ExtArgs>
+  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   route?: boolean | Prisma.Shipment$routeArgs<ExtArgs>
 }, ExtArgs["result"]["shipment"]>
 
@@ -2340,34 +2340,34 @@ export type ShipmentSelectScalar = {
 
 export type ShipmentOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "organizationId" | "trackingNumber" | "status" | "customerName" | "customerPhone" | "customerEmail" | "originAddress" | "originCity" | "originLat" | "originLng" | "destinationAddress" | "destinationCity" | "destinationLat" | "destinationLng" | "cargoType" | "cargoDescription" | "weightKg" | "dimensions" | "declaredValue" | "requestedPickupAt" | "estimatedDeliverAt" | "actualDeliveredAt" | "notes" | "assignmentId" | "createdAt" | "updatedAt" | "routeId", ExtArgs["result"]["shipment"]>
 export type ShipmentInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
-  events?: boolean | Prisma.Shipment$eventsArgs<ExtArgs>
+  etaPredictions?: boolean | Prisma.Shipment$etaPredictionsArgs<ExtArgs>
   proofs?: boolean | Prisma.Shipment$proofsArgs<ExtArgs>
   assignment?: boolean | Prisma.Shipment$assignmentArgs<ExtArgs>
+  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   route?: boolean | Prisma.Shipment$routeArgs<ExtArgs>
-  etaPredictions?: boolean | Prisma.Shipment$etaPredictionsArgs<ExtArgs>
+  events?: boolean | Prisma.Shipment$eventsArgs<ExtArgs>
   _count?: boolean | Prisma.ShipmentCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type ShipmentIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   assignment?: boolean | Prisma.Shipment$assignmentArgs<ExtArgs>
+  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   route?: boolean | Prisma.Shipment$routeArgs<ExtArgs>
 }
 export type ShipmentIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   assignment?: boolean | Prisma.Shipment$assignmentArgs<ExtArgs>
+  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   route?: boolean | Prisma.Shipment$routeArgs<ExtArgs>
 }
 
 export type $ShipmentPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Shipment"
   objects: {
-    organization: Prisma.$OrganizationPayload<ExtArgs>
-    events: Prisma.$ShipmentEventPayload<ExtArgs>[]
+    etaPredictions: Prisma.$EtaPredictionPayload<ExtArgs>[]
     proofs: Prisma.$ProofOfDeliveryPayload<ExtArgs>[]
     assignment: Prisma.$VehicleAssignmentPayload<ExtArgs> | null
+    organization: Prisma.$OrganizationPayload<ExtArgs>
     route: Prisma.$RoutePayload<ExtArgs> | null
-    etaPredictions: Prisma.$EtaPredictionPayload<ExtArgs>[]
+    events: Prisma.$ShipmentEventPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -2792,12 +2792,12 @@ readonly fields: ShipmentFieldRefs;
  */
 export interface Prisma__ShipmentClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  organization<T extends Prisma.OrganizationDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.OrganizationDefaultArgs<ExtArgs>>): Prisma.Prisma__OrganizationClient<runtime.Types.Result.GetResult<Prisma.$OrganizationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  events<T extends Prisma.Shipment$eventsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Shipment$eventsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ShipmentEventPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  etaPredictions<T extends Prisma.Shipment$etaPredictionsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Shipment$etaPredictionsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$EtaPredictionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   proofs<T extends Prisma.Shipment$proofsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Shipment$proofsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ProofOfDeliveryPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   assignment<T extends Prisma.Shipment$assignmentArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Shipment$assignmentArgs<ExtArgs>>): Prisma.Prisma__VehicleAssignmentClient<runtime.Types.Result.GetResult<Prisma.$VehicleAssignmentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  organization<T extends Prisma.OrganizationDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.OrganizationDefaultArgs<ExtArgs>>): Prisma.Prisma__OrganizationClient<runtime.Types.Result.GetResult<Prisma.$OrganizationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   route<T extends Prisma.Shipment$routeArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Shipment$routeArgs<ExtArgs>>): Prisma.Prisma__RouteClient<runtime.Types.Result.GetResult<Prisma.$RoutePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  etaPredictions<T extends Prisma.Shipment$etaPredictionsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Shipment$etaPredictionsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$EtaPredictionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  events<T extends Prisma.Shipment$eventsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Shipment$eventsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ShipmentEventPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -3256,27 +3256,27 @@ export type ShipmentDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Inte
 }
 
 /**
- * Shipment.events
+ * Shipment.etaPredictions
  */
-export type Shipment$eventsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Shipment$etaPredictionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the ShipmentEvent
+   * Select specific fields to fetch from the EtaPrediction
    */
-  select?: Prisma.ShipmentEventSelect<ExtArgs> | null
+  select?: Prisma.EtaPredictionSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the ShipmentEvent
+   * Omit specific fields from the EtaPrediction
    */
-  omit?: Prisma.ShipmentEventOmit<ExtArgs> | null
+  omit?: Prisma.EtaPredictionOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ShipmentEventInclude<ExtArgs> | null
-  where?: Prisma.ShipmentEventWhereInput
-  orderBy?: Prisma.ShipmentEventOrderByWithRelationInput | Prisma.ShipmentEventOrderByWithRelationInput[]
-  cursor?: Prisma.ShipmentEventWhereUniqueInput
+  include?: Prisma.EtaPredictionInclude<ExtArgs> | null
+  where?: Prisma.EtaPredictionWhereInput
+  orderBy?: Prisma.EtaPredictionOrderByWithRelationInput | Prisma.EtaPredictionOrderByWithRelationInput[]
+  cursor?: Prisma.EtaPredictionWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.ShipmentEventScalarFieldEnum | Prisma.ShipmentEventScalarFieldEnum[]
+  distinct?: Prisma.EtaPredictionScalarFieldEnum | Prisma.EtaPredictionScalarFieldEnum[]
 }
 
 /**
@@ -3342,27 +3342,27 @@ export type Shipment$routeArgs<ExtArgs extends runtime.Types.Extensions.Internal
 }
 
 /**
- * Shipment.etaPredictions
+ * Shipment.events
  */
-export type Shipment$etaPredictionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Shipment$eventsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the EtaPrediction
+   * Select specific fields to fetch from the ShipmentEvent
    */
-  select?: Prisma.EtaPredictionSelect<ExtArgs> | null
+  select?: Prisma.ShipmentEventSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the EtaPrediction
+   * Omit specific fields from the ShipmentEvent
    */
-  omit?: Prisma.EtaPredictionOmit<ExtArgs> | null
+  omit?: Prisma.ShipmentEventOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.EtaPredictionInclude<ExtArgs> | null
-  where?: Prisma.EtaPredictionWhereInput
-  orderBy?: Prisma.EtaPredictionOrderByWithRelationInput | Prisma.EtaPredictionOrderByWithRelationInput[]
-  cursor?: Prisma.EtaPredictionWhereUniqueInput
+  include?: Prisma.ShipmentEventInclude<ExtArgs> | null
+  where?: Prisma.ShipmentEventWhereInput
+  orderBy?: Prisma.ShipmentEventOrderByWithRelationInput | Prisma.ShipmentEventOrderByWithRelationInput[]
+  cursor?: Prisma.ShipmentEventWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.EtaPredictionScalarFieldEnum | Prisma.EtaPredictionScalarFieldEnum[]
+  distinct?: Prisma.ShipmentEventScalarFieldEnum | Prisma.ShipmentEventScalarFieldEnum[]
 }
 
 /**

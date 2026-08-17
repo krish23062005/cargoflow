@@ -198,14 +198,14 @@ export type UserWhereInput = {
   image?: Prisma.StringNullableFilter<"User"> | string | null
   createdAt?: Prisma.DateTimeFilter<"User"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"User"> | Date | string
-  sessions?: Prisma.SessionListRelationFilter
   accounts?: Prisma.AccountListRelationFilter
-  members?: Prisma.MemberListRelationFilter
-  invites?: Prisma.InvitationListRelationFilter
   auditLogs?: Prisma.AuditLogListRelationFilter
-  shipmentEvents?: Prisma.ShipmentEventListRelationFilter
+  invites?: Prisma.InvitationListRelationFilter
+  members?: Prisma.MemberListRelationFilter
   notifications?: Prisma.NotificationListRelationFilter
   notificationPrefs?: Prisma.NotificationPreferenceListRelationFilter
+  sessions?: Prisma.SessionListRelationFilter
+  shipmentEvents?: Prisma.ShipmentEventListRelationFilter
 }
 
 export type UserOrderByWithRelationInput = {
@@ -216,14 +216,14 @@ export type UserOrderByWithRelationInput = {
   image?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-  sessions?: Prisma.SessionOrderByRelationAggregateInput
   accounts?: Prisma.AccountOrderByRelationAggregateInput
-  members?: Prisma.MemberOrderByRelationAggregateInput
-  invites?: Prisma.InvitationOrderByRelationAggregateInput
   auditLogs?: Prisma.AuditLogOrderByRelationAggregateInput
-  shipmentEvents?: Prisma.ShipmentEventOrderByRelationAggregateInput
+  invites?: Prisma.InvitationOrderByRelationAggregateInput
+  members?: Prisma.MemberOrderByRelationAggregateInput
   notifications?: Prisma.NotificationOrderByRelationAggregateInput
   notificationPrefs?: Prisma.NotificationPreferenceOrderByRelationAggregateInput
+  sessions?: Prisma.SessionOrderByRelationAggregateInput
+  shipmentEvents?: Prisma.ShipmentEventOrderByRelationAggregateInput
 }
 
 export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -237,14 +237,14 @@ export type UserWhereUniqueInput = Prisma.AtLeast<{
   image?: Prisma.StringNullableFilter<"User"> | string | null
   createdAt?: Prisma.DateTimeFilter<"User"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"User"> | Date | string
-  sessions?: Prisma.SessionListRelationFilter
   accounts?: Prisma.AccountListRelationFilter
-  members?: Prisma.MemberListRelationFilter
-  invites?: Prisma.InvitationListRelationFilter
   auditLogs?: Prisma.AuditLogListRelationFilter
-  shipmentEvents?: Prisma.ShipmentEventListRelationFilter
+  invites?: Prisma.InvitationListRelationFilter
+  members?: Prisma.MemberListRelationFilter
   notifications?: Prisma.NotificationListRelationFilter
   notificationPrefs?: Prisma.NotificationPreferenceListRelationFilter
+  sessions?: Prisma.SessionListRelationFilter
+  shipmentEvents?: Prisma.ShipmentEventListRelationFilter
 }, "id" | "email">
 
 export type UserOrderByWithAggregationInput = {
@@ -281,14 +281,14 @@ export type UserCreateInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
   accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberCreateNestedManyWithoutUserInput
-  invites?: Prisma.InvitationCreateNestedManyWithoutInviterInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutUserInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
+  invites?: Prisma.InvitationCreateNestedManyWithoutInviterInput
+  members?: Prisma.MemberCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
 }
 
 export type UserUncheckedCreateInput = {
@@ -299,14 +299,14 @@ export type UserUncheckedCreateInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
   accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
-  invites?: Prisma.InvitationUncheckedCreateNestedManyWithoutInviterInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutUserInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
+  invites?: Prisma.InvitationUncheckedCreateNestedManyWithoutInviterInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
 }
 
 export type UserUpdateInput = {
@@ -317,14 +317,14 @@ export type UserUpdateInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
   accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
-  invites?: Prisma.InvitationUpdateManyWithoutInviterNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutUserNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
+  invites?: Prisma.InvitationUpdateManyWithoutInviterNestedInput
+  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
 }
 
 export type UserUncheckedUpdateInput = {
@@ -335,14 +335,14 @@ export type UserUncheckedUpdateInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
   accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
-  invites?: Prisma.InvitationUncheckedUpdateManyWithoutInviterNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutUserNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
+  invites?: Prisma.InvitationUncheckedUpdateManyWithoutInviterNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
 }
 
 export type UserCreateManyInput = {
@@ -554,12 +554,12 @@ export type UserCreateWithoutSessionsInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberCreateNestedManyWithoutUserInput
-  invites?: Prisma.InvitationCreateNestedManyWithoutInviterInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutUserInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
+  invites?: Prisma.InvitationCreateNestedManyWithoutInviterInput
+  members?: Prisma.MemberCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
 }
 
 export type UserUncheckedCreateWithoutSessionsInput = {
@@ -571,12 +571,12 @@ export type UserUncheckedCreateWithoutSessionsInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
-  invites?: Prisma.InvitationUncheckedCreateNestedManyWithoutInviterInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutUserInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
+  invites?: Prisma.InvitationUncheckedCreateNestedManyWithoutInviterInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
 }
 
 export type UserCreateOrConnectWithoutSessionsInput = {
@@ -604,12 +604,12 @@ export type UserUpdateWithoutSessionsInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
-  invites?: Prisma.InvitationUpdateManyWithoutInviterNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutUserNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
+  invites?: Prisma.InvitationUpdateManyWithoutInviterNestedInput
+  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
 }
 
 export type UserUncheckedUpdateWithoutSessionsInput = {
@@ -621,12 +621,12 @@ export type UserUncheckedUpdateWithoutSessionsInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
-  invites?: Prisma.InvitationUncheckedUpdateManyWithoutInviterNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutUserNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
+  invites?: Prisma.InvitationUncheckedUpdateManyWithoutInviterNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
 }
 
 export type UserCreateWithoutAccountsInput = {
@@ -637,13 +637,13 @@ export type UserCreateWithoutAccountsInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberCreateNestedManyWithoutUserInput
-  invites?: Prisma.InvitationCreateNestedManyWithoutInviterInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutUserInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
+  invites?: Prisma.InvitationCreateNestedManyWithoutInviterInput
+  members?: Prisma.MemberCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
 }
 
 export type UserUncheckedCreateWithoutAccountsInput = {
@@ -654,13 +654,13 @@ export type UserUncheckedCreateWithoutAccountsInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
-  invites?: Prisma.InvitationUncheckedCreateNestedManyWithoutInviterInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutUserInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
+  invites?: Prisma.InvitationUncheckedCreateNestedManyWithoutInviterInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
 }
 
 export type UserCreateOrConnectWithoutAccountsInput = {
@@ -687,13 +687,13 @@ export type UserUpdateWithoutAccountsInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
-  invites?: Prisma.InvitationUpdateManyWithoutInviterNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutUserNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
+  invites?: Prisma.InvitationUpdateManyWithoutInviterNestedInput
+  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
 }
 
 export type UserUncheckedUpdateWithoutAccountsInput = {
@@ -704,13 +704,13 @@ export type UserUncheckedUpdateWithoutAccountsInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
-  invites?: Prisma.InvitationUncheckedUpdateManyWithoutInviterNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutUserNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
+  invites?: Prisma.InvitationUncheckedUpdateManyWithoutInviterNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
 }
 
 export type UserCreateWithoutMembersInput = {
@@ -721,13 +721,13 @@ export type UserCreateWithoutMembersInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
   accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
-  invites?: Prisma.InvitationCreateNestedManyWithoutInviterInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutUserInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
+  invites?: Prisma.InvitationCreateNestedManyWithoutInviterInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
 }
 
 export type UserUncheckedCreateWithoutMembersInput = {
@@ -738,13 +738,13 @@ export type UserUncheckedCreateWithoutMembersInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
   accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
-  invites?: Prisma.InvitationUncheckedCreateNestedManyWithoutInviterInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutUserInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
+  invites?: Prisma.InvitationUncheckedCreateNestedManyWithoutInviterInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
 }
 
 export type UserCreateOrConnectWithoutMembersInput = {
@@ -771,13 +771,13 @@ export type UserUpdateWithoutMembersInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
   accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
-  invites?: Prisma.InvitationUpdateManyWithoutInviterNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutUserNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
+  invites?: Prisma.InvitationUpdateManyWithoutInviterNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
 }
 
 export type UserUncheckedUpdateWithoutMembersInput = {
@@ -788,13 +788,13 @@ export type UserUncheckedUpdateWithoutMembersInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
   accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
-  invites?: Prisma.InvitationUncheckedUpdateManyWithoutInviterNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutUserNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
+  invites?: Prisma.InvitationUncheckedUpdateManyWithoutInviterNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
 }
 
 export type UserCreateWithoutInvitesInput = {
@@ -805,13 +805,13 @@ export type UserCreateWithoutInvitesInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
   accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberCreateNestedManyWithoutUserInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutUserInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
+  members?: Prisma.MemberCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
 }
 
 export type UserUncheckedCreateWithoutInvitesInput = {
@@ -822,13 +822,13 @@ export type UserUncheckedCreateWithoutInvitesInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
   accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutUserInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
 }
 
 export type UserCreateOrConnectWithoutInvitesInput = {
@@ -855,13 +855,13 @@ export type UserUpdateWithoutInvitesInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
   accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutUserNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
+  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
 }
 
 export type UserUncheckedUpdateWithoutInvitesInput = {
@@ -872,13 +872,13 @@ export type UserUncheckedUpdateWithoutInvitesInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
   accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutUserNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
 }
 
 export type UserCreateWithoutAuditLogsInput = {
@@ -889,13 +889,13 @@ export type UserCreateWithoutAuditLogsInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
   accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberCreateNestedManyWithoutUserInput
   invites?: Prisma.InvitationCreateNestedManyWithoutInviterInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
+  members?: Prisma.MemberCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
 }
 
 export type UserUncheckedCreateWithoutAuditLogsInput = {
@@ -906,13 +906,13 @@ export type UserUncheckedCreateWithoutAuditLogsInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
   accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
   invites?: Prisma.InvitationUncheckedCreateNestedManyWithoutInviterInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
 }
 
 export type UserCreateOrConnectWithoutAuditLogsInput = {
@@ -939,13 +939,13 @@ export type UserUpdateWithoutAuditLogsInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
   accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
   invites?: Prisma.InvitationUpdateManyWithoutInviterNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
+  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
 }
 
 export type UserUncheckedUpdateWithoutAuditLogsInput = {
@@ -956,13 +956,13 @@ export type UserUncheckedUpdateWithoutAuditLogsInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
   accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
   invites?: Prisma.InvitationUncheckedUpdateManyWithoutInviterNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
 }
 
 export type UserCreateWithoutShipmentEventsInput = {
@@ -973,13 +973,13 @@ export type UserCreateWithoutShipmentEventsInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
   accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberCreateNestedManyWithoutUserInput
-  invites?: Prisma.InvitationCreateNestedManyWithoutInviterInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutUserInput
+  invites?: Prisma.InvitationCreateNestedManyWithoutInviterInput
+  members?: Prisma.MemberCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutShipmentEventsInput = {
@@ -990,13 +990,13 @@ export type UserUncheckedCreateWithoutShipmentEventsInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
   accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
-  invites?: Prisma.InvitationUncheckedCreateNestedManyWithoutInviterInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutUserInput
+  invites?: Prisma.InvitationUncheckedCreateNestedManyWithoutInviterInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutShipmentEventsInput = {
@@ -1023,13 +1023,13 @@ export type UserUpdateWithoutShipmentEventsInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
   accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
-  invites?: Prisma.InvitationUpdateManyWithoutInviterNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutUserNestedInput
+  invites?: Prisma.InvitationUpdateManyWithoutInviterNestedInput
+  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutShipmentEventsInput = {
@@ -1040,13 +1040,13 @@ export type UserUncheckedUpdateWithoutShipmentEventsInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
   accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
-  invites?: Prisma.InvitationUncheckedUpdateManyWithoutInviterNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutUserNestedInput
+  invites?: Prisma.InvitationUncheckedUpdateManyWithoutInviterNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutNotificationsInput = {
@@ -1057,13 +1057,13 @@ export type UserCreateWithoutNotificationsInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
   accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberCreateNestedManyWithoutUserInput
-  invites?: Prisma.InvitationCreateNestedManyWithoutInviterInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutUserInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
+  invites?: Prisma.InvitationCreateNestedManyWithoutInviterInput
+  members?: Prisma.MemberCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
 }
 
 export type UserUncheckedCreateWithoutNotificationsInput = {
@@ -1074,13 +1074,13 @@ export type UserUncheckedCreateWithoutNotificationsInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
   accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
-  invites?: Prisma.InvitationUncheckedCreateNestedManyWithoutInviterInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutUserInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
+  invites?: Prisma.InvitationUncheckedCreateNestedManyWithoutInviterInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
 }
 
 export type UserCreateOrConnectWithoutNotificationsInput = {
@@ -1107,13 +1107,13 @@ export type UserUpdateWithoutNotificationsInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
   accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
-  invites?: Prisma.InvitationUpdateManyWithoutInviterNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutUserNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
+  invites?: Prisma.InvitationUpdateManyWithoutInviterNestedInput
+  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
 }
 
 export type UserUncheckedUpdateWithoutNotificationsInput = {
@@ -1124,13 +1124,13 @@ export type UserUncheckedUpdateWithoutNotificationsInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
   accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
-  invites?: Prisma.InvitationUncheckedUpdateManyWithoutInviterNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutUserNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
+  invites?: Prisma.InvitationUncheckedUpdateManyWithoutInviterNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
 }
 
 export type UserCreateWithoutNotificationPrefsInput = {
@@ -1141,13 +1141,13 @@ export type UserCreateWithoutNotificationPrefsInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
   accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberCreateNestedManyWithoutUserInput
-  invites?: Prisma.InvitationCreateNestedManyWithoutInviterInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutUserInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
+  invites?: Prisma.InvitationCreateNestedManyWithoutInviterInput
+  members?: Prisma.MemberCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutCreatorInput
 }
 
 export type UserUncheckedCreateWithoutNotificationPrefsInput = {
@@ -1158,13 +1158,13 @@ export type UserUncheckedCreateWithoutNotificationPrefsInput = {
   image?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
   accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
-  invites?: Prisma.InvitationUncheckedCreateNestedManyWithoutInviterInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutUserInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
+  invites?: Prisma.InvitationUncheckedCreateNestedManyWithoutInviterInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
+  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutCreatorInput
 }
 
 export type UserCreateOrConnectWithoutNotificationPrefsInput = {
@@ -1191,13 +1191,13 @@ export type UserUpdateWithoutNotificationPrefsInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
   accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
-  invites?: Prisma.InvitationUpdateManyWithoutInviterNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutUserNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
+  invites?: Prisma.InvitationUpdateManyWithoutInviterNestedInput
+  members?: Prisma.MemberUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutCreatorNestedInput
 }
 
 export type UserUncheckedUpdateWithoutNotificationPrefsInput = {
@@ -1208,13 +1208,13 @@ export type UserUncheckedUpdateWithoutNotificationPrefsInput = {
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
   accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
-  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
-  invites?: Prisma.InvitationUncheckedUpdateManyWithoutInviterNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutUserNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
+  invites?: Prisma.InvitationUncheckedUpdateManyWithoutInviterNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
+  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutCreatorNestedInput
 }
 
 
@@ -1223,25 +1223,25 @@ export type UserUncheckedUpdateWithoutNotificationPrefsInput = {
  */
 
 export type UserCountOutputType = {
-  sessions: number
   accounts: number
-  members: number
-  invites: number
   auditLogs: number
-  shipmentEvents: number
+  invites: number
+  members: number
   notifications: number
   notificationPrefs: number
+  sessions: number
+  shipmentEvents: number
 }
 
 export type UserCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  sessions?: boolean | UserCountOutputTypeCountSessionsArgs
   accounts?: boolean | UserCountOutputTypeCountAccountsArgs
-  members?: boolean | UserCountOutputTypeCountMembersArgs
-  invites?: boolean | UserCountOutputTypeCountInvitesArgs
   auditLogs?: boolean | UserCountOutputTypeCountAuditLogsArgs
-  shipmentEvents?: boolean | UserCountOutputTypeCountShipmentEventsArgs
+  invites?: boolean | UserCountOutputTypeCountInvitesArgs
+  members?: boolean | UserCountOutputTypeCountMembersArgs
   notifications?: boolean | UserCountOutputTypeCountNotificationsArgs
   notificationPrefs?: boolean | UserCountOutputTypeCountNotificationPrefsArgs
+  sessions?: boolean | UserCountOutputTypeCountSessionsArgs
+  shipmentEvents?: boolean | UserCountOutputTypeCountShipmentEventsArgs
 }
 
 /**
@@ -1257,29 +1257,8 @@ export type UserCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Extensi
 /**
  * UserCountOutputType without action
  */
-export type UserCountOutputTypeCountSessionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.SessionWhereInput
-}
-
-/**
- * UserCountOutputType without action
- */
 export type UserCountOutputTypeCountAccountsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.AccountWhereInput
-}
-
-/**
- * UserCountOutputType without action
- */
-export type UserCountOutputTypeCountMembersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.MemberWhereInput
-}
-
-/**
- * UserCountOutputType without action
- */
-export type UserCountOutputTypeCountInvitesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.InvitationWhereInput
 }
 
 /**
@@ -1292,8 +1271,15 @@ export type UserCountOutputTypeCountAuditLogsArgs<ExtArgs extends runtime.Types.
 /**
  * UserCountOutputType without action
  */
-export type UserCountOutputTypeCountShipmentEventsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.ShipmentEventWhereInput
+export type UserCountOutputTypeCountInvitesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.InvitationWhereInput
+}
+
+/**
+ * UserCountOutputType without action
+ */
+export type UserCountOutputTypeCountMembersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.MemberWhereInput
 }
 
 /**
@@ -1310,6 +1296,20 @@ export type UserCountOutputTypeCountNotificationPrefsArgs<ExtArgs extends runtim
   where?: Prisma.NotificationPreferenceWhereInput
 }
 
+/**
+ * UserCountOutputType without action
+ */
+export type UserCountOutputTypeCountSessionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.SessionWhereInput
+}
+
+/**
+ * UserCountOutputType without action
+ */
+export type UserCountOutputTypeCountShipmentEventsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.ShipmentEventWhereInput
+}
+
 
 export type UserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -1319,14 +1319,14 @@ export type UserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = r
   image?: boolean
   createdAt?: boolean
   updatedAt?: boolean
-  sessions?: boolean | Prisma.User$sessionsArgs<ExtArgs>
   accounts?: boolean | Prisma.User$accountsArgs<ExtArgs>
-  members?: boolean | Prisma.User$membersArgs<ExtArgs>
-  invites?: boolean | Prisma.User$invitesArgs<ExtArgs>
   auditLogs?: boolean | Prisma.User$auditLogsArgs<ExtArgs>
-  shipmentEvents?: boolean | Prisma.User$shipmentEventsArgs<ExtArgs>
+  invites?: boolean | Prisma.User$invitesArgs<ExtArgs>
+  members?: boolean | Prisma.User$membersArgs<ExtArgs>
   notifications?: boolean | Prisma.User$notificationsArgs<ExtArgs>
   notificationPrefs?: boolean | Prisma.User$notificationPrefsArgs<ExtArgs>
+  sessions?: boolean | Prisma.User$sessionsArgs<ExtArgs>
+  shipmentEvents?: boolean | Prisma.User$shipmentEventsArgs<ExtArgs>
   _count?: boolean | Prisma.UserCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["user"]>
 
@@ -1362,14 +1362,14 @@ export type UserSelectScalar = {
 
 export type UserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "email" | "emailVerified" | "image" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
 export type UserInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  sessions?: boolean | Prisma.User$sessionsArgs<ExtArgs>
   accounts?: boolean | Prisma.User$accountsArgs<ExtArgs>
-  members?: boolean | Prisma.User$membersArgs<ExtArgs>
-  invites?: boolean | Prisma.User$invitesArgs<ExtArgs>
   auditLogs?: boolean | Prisma.User$auditLogsArgs<ExtArgs>
-  shipmentEvents?: boolean | Prisma.User$shipmentEventsArgs<ExtArgs>
+  invites?: boolean | Prisma.User$invitesArgs<ExtArgs>
+  members?: boolean | Prisma.User$membersArgs<ExtArgs>
   notifications?: boolean | Prisma.User$notificationsArgs<ExtArgs>
   notificationPrefs?: boolean | Prisma.User$notificationPrefsArgs<ExtArgs>
+  sessions?: boolean | Prisma.User$sessionsArgs<ExtArgs>
+  shipmentEvents?: boolean | Prisma.User$shipmentEventsArgs<ExtArgs>
   _count?: boolean | Prisma.UserCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type UserIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
@@ -1378,14 +1378,14 @@ export type UserIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensi
 export type $UserPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "User"
   objects: {
-    sessions: Prisma.$SessionPayload<ExtArgs>[]
     accounts: Prisma.$AccountPayload<ExtArgs>[]
-    members: Prisma.$MemberPayload<ExtArgs>[]
-    invites: Prisma.$InvitationPayload<ExtArgs>[]
     auditLogs: Prisma.$AuditLogPayload<ExtArgs>[]
-    shipmentEvents: Prisma.$ShipmentEventPayload<ExtArgs>[]
+    invites: Prisma.$InvitationPayload<ExtArgs>[]
+    members: Prisma.$MemberPayload<ExtArgs>[]
     notifications: Prisma.$NotificationPayload<ExtArgs>[]
     notificationPrefs: Prisma.$NotificationPreferencePayload<ExtArgs>[]
+    sessions: Prisma.$SessionPayload<ExtArgs>[]
+    shipmentEvents: Prisma.$ShipmentEventPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1789,14 +1789,14 @@ readonly fields: UserFieldRefs;
  */
 export interface Prisma__UserClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  sessions<T extends Prisma.User$sessionsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$sessionsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$SessionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   accounts<T extends Prisma.User$accountsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$accountsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AccountPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  members<T extends Prisma.User$membersArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$membersArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$MemberPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  invites<T extends Prisma.User$invitesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$invitesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$InvitationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   auditLogs<T extends Prisma.User$auditLogsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$auditLogsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AuditLogPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  shipmentEvents<T extends Prisma.User$shipmentEventsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$shipmentEventsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ShipmentEventPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  invites<T extends Prisma.User$invitesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$invitesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$InvitationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  members<T extends Prisma.User$membersArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$membersArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$MemberPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   notifications<T extends Prisma.User$notificationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$notificationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$NotificationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   notificationPrefs<T extends Prisma.User$notificationPrefsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$notificationPrefsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$NotificationPreferencePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  sessions<T extends Prisma.User$sessionsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$sessionsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$SessionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  shipmentEvents<T extends Prisma.User$shipmentEventsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$shipmentEventsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ShipmentEventPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2226,30 +2226,6 @@ export type UserDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Internal
 }
 
 /**
- * User.sessions
- */
-export type User$sessionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the Session
-   */
-  select?: Prisma.SessionSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the Session
-   */
-  omit?: Prisma.SessionOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.SessionInclude<ExtArgs> | null
-  where?: Prisma.SessionWhereInput
-  orderBy?: Prisma.SessionOrderByWithRelationInput | Prisma.SessionOrderByWithRelationInput[]
-  cursor?: Prisma.SessionWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.SessionScalarFieldEnum | Prisma.SessionScalarFieldEnum[]
-}
-
-/**
  * User.accounts
  */
 export type User$accountsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -2271,54 +2247,6 @@ export type User$accountsArgs<ExtArgs extends runtime.Types.Extensions.InternalA
   take?: number
   skip?: number
   distinct?: Prisma.AccountScalarFieldEnum | Prisma.AccountScalarFieldEnum[]
-}
-
-/**
- * User.members
- */
-export type User$membersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the Member
-   */
-  select?: Prisma.MemberSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the Member
-   */
-  omit?: Prisma.MemberOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.MemberInclude<ExtArgs> | null
-  where?: Prisma.MemberWhereInput
-  orderBy?: Prisma.MemberOrderByWithRelationInput | Prisma.MemberOrderByWithRelationInput[]
-  cursor?: Prisma.MemberWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.MemberScalarFieldEnum | Prisma.MemberScalarFieldEnum[]
-}
-
-/**
- * User.invites
- */
-export type User$invitesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the Invitation
-   */
-  select?: Prisma.InvitationSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the Invitation
-   */
-  omit?: Prisma.InvitationOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.InvitationInclude<ExtArgs> | null
-  where?: Prisma.InvitationWhereInput
-  orderBy?: Prisma.InvitationOrderByWithRelationInput | Prisma.InvitationOrderByWithRelationInput[]
-  cursor?: Prisma.InvitationWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.InvitationScalarFieldEnum | Prisma.InvitationScalarFieldEnum[]
 }
 
 /**
@@ -2346,27 +2274,51 @@ export type User$auditLogsArgs<ExtArgs extends runtime.Types.Extensions.Internal
 }
 
 /**
- * User.shipmentEvents
+ * User.invites
  */
-export type User$shipmentEventsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type User$invitesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the ShipmentEvent
+   * Select specific fields to fetch from the Invitation
    */
-  select?: Prisma.ShipmentEventSelect<ExtArgs> | null
+  select?: Prisma.InvitationSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the ShipmentEvent
+   * Omit specific fields from the Invitation
    */
-  omit?: Prisma.ShipmentEventOmit<ExtArgs> | null
+  omit?: Prisma.InvitationOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ShipmentEventInclude<ExtArgs> | null
-  where?: Prisma.ShipmentEventWhereInput
-  orderBy?: Prisma.ShipmentEventOrderByWithRelationInput | Prisma.ShipmentEventOrderByWithRelationInput[]
-  cursor?: Prisma.ShipmentEventWhereUniqueInput
+  include?: Prisma.InvitationInclude<ExtArgs> | null
+  where?: Prisma.InvitationWhereInput
+  orderBy?: Prisma.InvitationOrderByWithRelationInput | Prisma.InvitationOrderByWithRelationInput[]
+  cursor?: Prisma.InvitationWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.ShipmentEventScalarFieldEnum | Prisma.ShipmentEventScalarFieldEnum[]
+  distinct?: Prisma.InvitationScalarFieldEnum | Prisma.InvitationScalarFieldEnum[]
+}
+
+/**
+ * User.members
+ */
+export type User$membersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Member
+   */
+  select?: Prisma.MemberSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Member
+   */
+  omit?: Prisma.MemberOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.MemberInclude<ExtArgs> | null
+  where?: Prisma.MemberWhereInput
+  orderBy?: Prisma.MemberOrderByWithRelationInput | Prisma.MemberOrderByWithRelationInput[]
+  cursor?: Prisma.MemberWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.MemberScalarFieldEnum | Prisma.MemberScalarFieldEnum[]
 }
 
 /**
@@ -2415,6 +2367,54 @@ export type User$notificationPrefsArgs<ExtArgs extends runtime.Types.Extensions.
   take?: number
   skip?: number
   distinct?: Prisma.NotificationPreferenceScalarFieldEnum | Prisma.NotificationPreferenceScalarFieldEnum[]
+}
+
+/**
+ * User.sessions
+ */
+export type User$sessionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Session
+   */
+  select?: Prisma.SessionSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Session
+   */
+  omit?: Prisma.SessionOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.SessionInclude<ExtArgs> | null
+  where?: Prisma.SessionWhereInput
+  orderBy?: Prisma.SessionOrderByWithRelationInput | Prisma.SessionOrderByWithRelationInput[]
+  cursor?: Prisma.SessionWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.SessionScalarFieldEnum | Prisma.SessionScalarFieldEnum[]
+}
+
+/**
+ * User.shipmentEvents
+ */
+export type User$shipmentEventsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the ShipmentEvent
+   */
+  select?: Prisma.ShipmentEventSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the ShipmentEvent
+   */
+  omit?: Prisma.ShipmentEventOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.ShipmentEventInclude<ExtArgs> | null
+  where?: Prisma.ShipmentEventWhereInput
+  orderBy?: Prisma.ShipmentEventOrderByWithRelationInput | Prisma.ShipmentEventOrderByWithRelationInput[]
+  cursor?: Prisma.ShipmentEventWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.ShipmentEventScalarFieldEnum | Prisma.ShipmentEventScalarFieldEnum[]
 }
 
 /**

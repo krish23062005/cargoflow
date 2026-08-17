@@ -280,9 +280,9 @@ export type EtaPredictionWhereInput = {
   speedUsedKmh?: Prisma.FloatNullableFilter<"EtaPrediction"> | number | null
   isDelayed?: Prisma.BoolFilter<"EtaPrediction"> | boolean
   actualDeliveredAt?: Prisma.DateTimeNullableFilter<"EtaPrediction"> | Date | string | null
+  organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
   shipment?: Prisma.XOR<Prisma.ShipmentScalarRelationFilter, Prisma.ShipmentWhereInput>
   vehicle?: Prisma.XOR<Prisma.VehicleNullableScalarRelationFilter, Prisma.VehicleWhereInput> | null
-  organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
 }
 
 export type EtaPredictionOrderByWithRelationInput = {
@@ -298,9 +298,9 @@ export type EtaPredictionOrderByWithRelationInput = {
   speedUsedKmh?: Prisma.SortOrderInput | Prisma.SortOrder
   isDelayed?: Prisma.SortOrder
   actualDeliveredAt?: Prisma.SortOrderInput | Prisma.SortOrder
+  organization?: Prisma.OrganizationOrderByWithRelationInput
   shipment?: Prisma.ShipmentOrderByWithRelationInput
   vehicle?: Prisma.VehicleOrderByWithRelationInput
-  organization?: Prisma.OrganizationOrderByWithRelationInput
 }
 
 export type EtaPredictionWhereUniqueInput = Prisma.AtLeast<{
@@ -319,9 +319,9 @@ export type EtaPredictionWhereUniqueInput = Prisma.AtLeast<{
   speedUsedKmh?: Prisma.FloatNullableFilter<"EtaPrediction"> | number | null
   isDelayed?: Prisma.BoolFilter<"EtaPrediction"> | boolean
   actualDeliveredAt?: Prisma.DateTimeNullableFilter<"EtaPrediction"> | Date | string | null
+  organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
   shipment?: Prisma.XOR<Prisma.ShipmentScalarRelationFilter, Prisma.ShipmentWhereInput>
   vehicle?: Prisma.XOR<Prisma.VehicleNullableScalarRelationFilter, Prisma.VehicleWhereInput> | null
-  organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
 }, "id">
 
 export type EtaPredictionOrderByWithAggregationInput = {
@@ -372,9 +372,9 @@ export type EtaPredictionCreateInput = {
   speedUsedKmh?: number | null
   isDelayed?: boolean
   actualDeliveredAt?: Date | string | null
+  organization: Prisma.OrganizationCreateNestedOneWithoutEtaPredictionsInput
   shipment: Prisma.ShipmentCreateNestedOneWithoutEtaPredictionsInput
   vehicle?: Prisma.VehicleCreateNestedOneWithoutEtaPredictionsInput
-  organization: Prisma.OrganizationCreateNestedOneWithoutEtaPredictionsInput
 }
 
 export type EtaPredictionUncheckedCreateInput = {
@@ -402,9 +402,9 @@ export type EtaPredictionUpdateInput = {
   speedUsedKmh?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   isDelayed?: Prisma.BoolFieldUpdateOperationsInput | boolean
   actualDeliveredAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  organization?: Prisma.OrganizationUpdateOneRequiredWithoutEtaPredictionsNestedInput
   shipment?: Prisma.ShipmentUpdateOneRequiredWithoutEtaPredictionsNestedInput
   vehicle?: Prisma.VehicleUpdateOneWithoutEtaPredictionsNestedInput
-  organization?: Prisma.OrganizationUpdateOneRequiredWithoutEtaPredictionsNestedInput
 }
 
 export type EtaPredictionUncheckedUpdateInput = {
@@ -739,8 +739,8 @@ export type EtaPredictionCreateWithoutVehicleInput = {
   speedUsedKmh?: number | null
   isDelayed?: boolean
   actualDeliveredAt?: Date | string | null
-  shipment: Prisma.ShipmentCreateNestedOneWithoutEtaPredictionsInput
   organization: Prisma.OrganizationCreateNestedOneWithoutEtaPredictionsInput
+  shipment: Prisma.ShipmentCreateNestedOneWithoutEtaPredictionsInput
 }
 
 export type EtaPredictionUncheckedCreateWithoutVehicleInput = {
@@ -793,8 +793,8 @@ export type EtaPredictionCreateWithoutShipmentInput = {
   speedUsedKmh?: number | null
   isDelayed?: boolean
   actualDeliveredAt?: Date | string | null
-  vehicle?: Prisma.VehicleCreateNestedOneWithoutEtaPredictionsInput
   organization: Prisma.OrganizationCreateNestedOneWithoutEtaPredictionsInput
+  vehicle?: Prisma.VehicleCreateNestedOneWithoutEtaPredictionsInput
 }
 
 export type EtaPredictionUncheckedCreateWithoutShipmentInput = {
@@ -917,8 +917,8 @@ export type EtaPredictionUpdateWithoutVehicleInput = {
   speedUsedKmh?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   isDelayed?: Prisma.BoolFieldUpdateOperationsInput | boolean
   actualDeliveredAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  shipment?: Prisma.ShipmentUpdateOneRequiredWithoutEtaPredictionsNestedInput
   organization?: Prisma.OrganizationUpdateOneRequiredWithoutEtaPredictionsNestedInput
+  shipment?: Prisma.ShipmentUpdateOneRequiredWithoutEtaPredictionsNestedInput
 }
 
 export type EtaPredictionUncheckedUpdateWithoutVehicleInput = {
@@ -973,8 +973,8 @@ export type EtaPredictionUpdateWithoutShipmentInput = {
   speedUsedKmh?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   isDelayed?: Prisma.BoolFieldUpdateOperationsInput | boolean
   actualDeliveredAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  vehicle?: Prisma.VehicleUpdateOneWithoutEtaPredictionsNestedInput
   organization?: Prisma.OrganizationUpdateOneRequiredWithoutEtaPredictionsNestedInput
+  vehicle?: Prisma.VehicleUpdateOneWithoutEtaPredictionsNestedInput
 }
 
 export type EtaPredictionUncheckedUpdateWithoutShipmentInput = {
@@ -1020,9 +1020,9 @@ export type EtaPredictionSelect<ExtArgs extends runtime.Types.Extensions.Interna
   speedUsedKmh?: boolean
   isDelayed?: boolean
   actualDeliveredAt?: boolean
+  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   vehicle?: boolean | Prisma.EtaPrediction$vehicleArgs<ExtArgs>
-  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["etaPrediction"]>
 
 export type EtaPredictionSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -1038,9 +1038,9 @@ export type EtaPredictionSelectCreateManyAndReturn<ExtArgs extends runtime.Types
   speedUsedKmh?: boolean
   isDelayed?: boolean
   actualDeliveredAt?: boolean
+  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   vehicle?: boolean | Prisma.EtaPrediction$vehicleArgs<ExtArgs>
-  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["etaPrediction"]>
 
 export type EtaPredictionSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -1056,9 +1056,9 @@ export type EtaPredictionSelectUpdateManyAndReturn<ExtArgs extends runtime.Types
   speedUsedKmh?: boolean
   isDelayed?: boolean
   actualDeliveredAt?: boolean
+  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   vehicle?: boolean | Prisma.EtaPrediction$vehicleArgs<ExtArgs>
-  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["etaPrediction"]>
 
 export type EtaPredictionSelectScalar = {
@@ -1078,27 +1078,27 @@ export type EtaPredictionSelectScalar = {
 
 export type EtaPredictionOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "organizationId" | "shipmentId" | "vehicleId" | "status" | "predictedAt" | "remainingKm" | "predictedMinutes" | "etaAt" | "speedUsedKmh" | "isDelayed" | "actualDeliveredAt", ExtArgs["result"]["etaPrediction"]>
 export type EtaPredictionInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   vehicle?: boolean | Prisma.EtaPrediction$vehicleArgs<ExtArgs>
-  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
 }
 export type EtaPredictionIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   vehicle?: boolean | Prisma.EtaPrediction$vehicleArgs<ExtArgs>
-  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
 }
 export type EtaPredictionIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   vehicle?: boolean | Prisma.EtaPrediction$vehicleArgs<ExtArgs>
-  organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
 }
 
 export type $EtaPredictionPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "EtaPrediction"
   objects: {
+    organization: Prisma.$OrganizationPayload<ExtArgs>
     shipment: Prisma.$ShipmentPayload<ExtArgs>
     vehicle: Prisma.$VehiclePayload<ExtArgs> | null
-    organization: Prisma.$OrganizationPayload<ExtArgs>
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1507,9 +1507,9 @@ readonly fields: EtaPredictionFieldRefs;
  */
 export interface Prisma__EtaPredictionClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
+  organization<T extends Prisma.OrganizationDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.OrganizationDefaultArgs<ExtArgs>>): Prisma.Prisma__OrganizationClient<runtime.Types.Result.GetResult<Prisma.$OrganizationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   shipment<T extends Prisma.ShipmentDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ShipmentDefaultArgs<ExtArgs>>): Prisma.Prisma__ShipmentClient<runtime.Types.Result.GetResult<Prisma.$ShipmentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   vehicle<T extends Prisma.EtaPrediction$vehicleArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.EtaPrediction$vehicleArgs<ExtArgs>>): Prisma.Prisma__VehicleClient<runtime.Types.Result.GetResult<Prisma.$VehiclePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  organization<T extends Prisma.OrganizationDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.OrganizationDefaultArgs<ExtArgs>>): Prisma.Prisma__OrganizationClient<runtime.Types.Result.GetResult<Prisma.$OrganizationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.

@@ -260,9 +260,9 @@ export type ShipmentEventWhereInput = {
   longitude?: Prisma.FloatNullableFilter<"ShipmentEvent"> | number | null
   createdById?: Prisma.StringNullableFilter<"ShipmentEvent"> | string | null
   createdAt?: Prisma.DateTimeFilter<"ShipmentEvent"> | Date | string
-  shipment?: Prisma.XOR<Prisma.ShipmentScalarRelationFilter, Prisma.ShipmentWhereInput>
   creator?: Prisma.XOR<Prisma.UserNullableScalarRelationFilter, Prisma.UserWhereInput> | null
   organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
+  shipment?: Prisma.XOR<Prisma.ShipmentScalarRelationFilter, Prisma.ShipmentWhereInput>
 }
 
 export type ShipmentEventOrderByWithRelationInput = {
@@ -276,9 +276,9 @@ export type ShipmentEventOrderByWithRelationInput = {
   longitude?: Prisma.SortOrderInput | Prisma.SortOrder
   createdById?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
-  shipment?: Prisma.ShipmentOrderByWithRelationInput
   creator?: Prisma.UserOrderByWithRelationInput
   organization?: Prisma.OrganizationOrderByWithRelationInput
+  shipment?: Prisma.ShipmentOrderByWithRelationInput
 }
 
 export type ShipmentEventWhereUniqueInput = Prisma.AtLeast<{
@@ -295,9 +295,9 @@ export type ShipmentEventWhereUniqueInput = Prisma.AtLeast<{
   longitude?: Prisma.FloatNullableFilter<"ShipmentEvent"> | number | null
   createdById?: Prisma.StringNullableFilter<"ShipmentEvent"> | string | null
   createdAt?: Prisma.DateTimeFilter<"ShipmentEvent"> | Date | string
-  shipment?: Prisma.XOR<Prisma.ShipmentScalarRelationFilter, Prisma.ShipmentWhereInput>
   creator?: Prisma.XOR<Prisma.UserNullableScalarRelationFilter, Prisma.UserWhereInput> | null
   organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
+  shipment?: Prisma.XOR<Prisma.ShipmentScalarRelationFilter, Prisma.ShipmentWhereInput>
 }, "id">
 
 export type ShipmentEventOrderByWithAggregationInput = {
@@ -342,9 +342,9 @@ export type ShipmentEventCreateInput = {
   latitude?: number | null
   longitude?: number | null
   createdAt?: Date | string
-  shipment: Prisma.ShipmentCreateNestedOneWithoutEventsInput
   creator?: Prisma.UserCreateNestedOneWithoutShipmentEventsInput
   organization: Prisma.OrganizationCreateNestedOneWithoutShipmentEventsInput
+  shipment: Prisma.ShipmentCreateNestedOneWithoutEventsInput
 }
 
 export type ShipmentEventUncheckedCreateInput = {
@@ -368,9 +368,9 @@ export type ShipmentEventUpdateInput = {
   latitude?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   longitude?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  shipment?: Prisma.ShipmentUpdateOneRequiredWithoutEventsNestedInput
   creator?: Prisma.UserUpdateOneWithoutShipmentEventsNestedInput
   organization?: Prisma.OrganizationUpdateOneRequiredWithoutShipmentEventsNestedInput
+  shipment?: Prisma.ShipmentUpdateOneRequiredWithoutEventsNestedInput
 }
 
 export type ShipmentEventUncheckedUpdateInput = {
@@ -615,8 +615,8 @@ export type ShipmentEventCreateWithoutCreatorInput = {
   latitude?: number | null
   longitude?: number | null
   createdAt?: Date | string
-  shipment: Prisma.ShipmentCreateNestedOneWithoutEventsInput
   organization: Prisma.OrganizationCreateNestedOneWithoutShipmentEventsInput
+  shipment: Prisma.ShipmentCreateNestedOneWithoutEventsInput
 }
 
 export type ShipmentEventUncheckedCreateWithoutCreatorInput = {
@@ -681,8 +681,8 @@ export type ShipmentEventCreateWithoutOrganizationInput = {
   latitude?: number | null
   longitude?: number | null
   createdAt?: Date | string
-  shipment: Prisma.ShipmentCreateNestedOneWithoutEventsInput
   creator?: Prisma.UserCreateNestedOneWithoutShipmentEventsInput
+  shipment: Prisma.ShipmentCreateNestedOneWithoutEventsInput
 }
 
 export type ShipmentEventUncheckedCreateWithoutOrganizationInput = {
@@ -793,8 +793,8 @@ export type ShipmentEventUpdateWithoutCreatorInput = {
   latitude?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   longitude?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  shipment?: Prisma.ShipmentUpdateOneRequiredWithoutEventsNestedInput
   organization?: Prisma.OrganizationUpdateOneRequiredWithoutShipmentEventsNestedInput
+  shipment?: Prisma.ShipmentUpdateOneRequiredWithoutEventsNestedInput
 }
 
 export type ShipmentEventUncheckedUpdateWithoutCreatorInput = {
@@ -841,8 +841,8 @@ export type ShipmentEventUpdateWithoutOrganizationInput = {
   latitude?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   longitude?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  shipment?: Prisma.ShipmentUpdateOneRequiredWithoutEventsNestedInput
   creator?: Prisma.UserUpdateOneWithoutShipmentEventsNestedInput
+  shipment?: Prisma.ShipmentUpdateOneRequiredWithoutEventsNestedInput
 }
 
 export type ShipmentEventUncheckedUpdateWithoutOrganizationInput = {
@@ -930,9 +930,9 @@ export type ShipmentEventSelect<ExtArgs extends runtime.Types.Extensions.Interna
   longitude?: boolean
   createdById?: boolean
   createdAt?: boolean
-  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   creator?: boolean | Prisma.ShipmentEvent$creatorArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["shipmentEvent"]>
 
 export type ShipmentEventSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -946,9 +946,9 @@ export type ShipmentEventSelectCreateManyAndReturn<ExtArgs extends runtime.Types
   longitude?: boolean
   createdById?: boolean
   createdAt?: boolean
-  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   creator?: boolean | Prisma.ShipmentEvent$creatorArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["shipmentEvent"]>
 
 export type ShipmentEventSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -962,9 +962,9 @@ export type ShipmentEventSelectUpdateManyAndReturn<ExtArgs extends runtime.Types
   longitude?: boolean
   createdById?: boolean
   createdAt?: boolean
-  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   creator?: boolean | Prisma.ShipmentEvent$creatorArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["shipmentEvent"]>
 
 export type ShipmentEventSelectScalar = {
@@ -982,27 +982,27 @@ export type ShipmentEventSelectScalar = {
 
 export type ShipmentEventOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "organizationId" | "shipmentId" | "eventType" | "description" | "location" | "latitude" | "longitude" | "createdById" | "createdAt", ExtArgs["result"]["shipmentEvent"]>
 export type ShipmentEventInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   creator?: boolean | Prisma.ShipmentEvent$creatorArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
 }
 export type ShipmentEventIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   creator?: boolean | Prisma.ShipmentEvent$creatorArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
 }
 export type ShipmentEventIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   creator?: boolean | Prisma.ShipmentEvent$creatorArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
 }
 
 export type $ShipmentEventPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "ShipmentEvent"
   objects: {
-    shipment: Prisma.$ShipmentPayload<ExtArgs>
     creator: Prisma.$UserPayload<ExtArgs> | null
     organization: Prisma.$OrganizationPayload<ExtArgs>
+    shipment: Prisma.$ShipmentPayload<ExtArgs>
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1409,9 +1409,9 @@ readonly fields: ShipmentEventFieldRefs;
  */
 export interface Prisma__ShipmentEventClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  shipment<T extends Prisma.ShipmentDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ShipmentDefaultArgs<ExtArgs>>): Prisma.Prisma__ShipmentClient<runtime.Types.Result.GetResult<Prisma.$ShipmentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   creator<T extends Prisma.ShipmentEvent$creatorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ShipmentEvent$creatorArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   organization<T extends Prisma.OrganizationDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.OrganizationDefaultArgs<ExtArgs>>): Prisma.Prisma__OrganizationClient<runtime.Types.Result.GetResult<Prisma.$OrganizationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  shipment<T extends Prisma.ShipmentDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ShipmentDefaultArgs<ExtArgs>>): Prisma.Prisma__ShipmentClient<runtime.Types.Result.GetResult<Prisma.$ShipmentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.

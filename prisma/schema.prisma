@@ -8,37 +8,34 @@ datasource db {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String
-  email         String    @unique
-  emailVerified Boolean   @default(false)
-  image         String?
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
-
-  sessions  Session[]
-  accounts  Account[]
-  members   Member[]
-  invites   Invitation[] @relation("InvitationInviter")
-  auditLogs AuditLog[]
-  shipmentEvents ShipmentEvent[]
+  id                String                   @id @default(cuid())
+  name              String
+  email             String                   @unique
+  emailVerified     Boolean                  @default(false)
+  image             String?
+  createdAt         DateTime                 @default(now())
+  updatedAt         DateTime                 @updatedAt
+  accounts          Account[]
+  auditLogs         AuditLog[]
+  invites           Invitation[]             @relation("InvitationInviter")
+  members           Member[]
   notifications     Notification[]
   notificationPrefs NotificationPreference[]
+  sessions          Session[]
+  shipmentEvents    ShipmentEvent[]
 }
 
 model Session {
-  id        String   @id @default(cuid())
-  expiresAt DateTime
-  token     String   @unique
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  ipAddress String?
-  userAgent String?
-  userId    String
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-
+  id                   String   @id @default(cuid())
+  expiresAt            DateTime
+  token                String   @unique
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+  ipAddress            String?
+  userAgent            String?
+  userId               String
   activeOrganizationId String?
+  user                 User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Account {
@@ -55,11 +52,10 @@ model Account {
   password              String?
   createdAt             DateTime  @default(now())
   updatedAt             DateTime  @updatedAt
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@index([providerId, accountId])
   @@unique([providerId, accountId])
+  @@index([providerId, accountId])
 }
 
 model Verification {
@@ -74,46 +70,43 @@ model Verification {
 }
 
 model Organization {
-  id        String   @id @default(cuid())
-  name      String
-  slug      String   @unique
-  logo      String?
-  metadata  Json?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  country  String
-  currency String
-  timezone String
-  industry String?
-
-  members        Member[]
-  invitations    Invitation[]
-  auditLogs      AuditLog[]
-  vehicles       Vehicle[]
-  drivers        Driver[]
-  assignments    VehicleAssignment[]
-  shipments      Shipment[]
-  shipmentEvents ShipmentEvent[]
-  routes         Route[]
-  tracking       TrackingPoint[]
-  etaPredictions EtaPrediction[]
+  id                String                   @id @default(cuid())
+  name              String
+  slug              String                   @unique
+  logo              String?
+  metadata          Json?
+  createdAt         DateTime                 @default(now())
+  updatedAt         DateTime                 @updatedAt
+  country           String
+  currency          String
+  timezone          String
+  industry          String?
+  auditLogs         AuditLog[]
+  drivers           Driver[]
+  etaPredictions    EtaPrediction[]
+  invitations       Invitation[]
+  members           Member[]
   notifications     Notification[]
   notificationPrefs NotificationPreference[]
   proofs            ProofOfDelivery[]
+  routes            Route[]
+  shipments         Shipment[]
+  shipmentEvents    ShipmentEvent[]
+  tracking          TrackingPoint[]
+  vehicles          Vehicle[]
+  assignments       VehicleAssignment[]
 
   @@index([slug])
 }
 
 model Member {
-  id             String   @id @default(cuid())
+  id             String       @id @default(cuid())
   organizationId String
   userId         String
-  role           String   @default("member")
-  createdAt      DateTime @default(now())
-
-  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
-  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role           String       @default("member")
+  createdAt      DateTime     @default(now())
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([organizationId, userId])
   @@index([userId])
@@ -121,24 +114,23 @@ model Member {
 }
 
 model Invitation {
-  id             String   @id @default(cuid())
+  id             String       @id @default(cuid())
   organizationId String
   email          String
   role           String
-  status         String   @default("pending")
+  status         String       @default("pending")
   expiresAt      DateTime
   inviterId      String
-  createdAt      DateTime @default(now())
-
-  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
-  inviter      User         @relation("InvitationInviter", fields: [inviterId], references: [id], onDelete: Cascade)
+  createdAt      DateTime     @default(now())
+  inviter        User         @relation("InvitationInviter", fields: [inviterId], references: [id], onDelete: Cascade)
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
 
   @@index([organizationId])
   @@index([email])
 }
 
 model AuditLog {
-  id             String   @id @default(cuid())
+  id             String       @id @default(cuid())
   organizationId String
   userId         String
   action         String
@@ -147,10 +139,9 @@ model AuditLog {
   metadata       Json?
   ipAddress      String?
   userAgent      String?
-  createdAt      DateTime @default(now())
-
-  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
-  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt      DateTime     @default(now())
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([organizationId, createdAt])
   @@index([organizationId, resource, createdAt])
@@ -158,30 +149,29 @@ model AuditLog {
 }
 
 model Vehicle {
-  id             String   @id @default(cuid())
-  organizationId String
-  plateNumber    String
-  make           String
-  model          String
-  year           Int
-  type           String   @default("TRUCK")
-  status         String   @default("AVAILABLE")
-  color          String?
-  vin            String?
-  fuelType       String?
-  fuelCapacity   Float?
+  id               String              @id @default(cuid())
+  organizationId   String
+  plateNumber      String
+  make             String
+  model            String
+  year             Int
+  type             String              @default("TRUCK")
+  status           String              @default("AVAILABLE")
+  color            String?
+  vin              String?
+  fuelType         String?
+  fuelCapacity     Float?
   insuranceCompany String?
   insuranceExpiry  DateTime?
   lastServiceAt    DateTime?
   nextServiceAt    DateTime?
-  notes          String?
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
-
-  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
-  assignments  VehicleAssignment[]
-  tracking     TrackingPoint[]
-  etaPredictions EtaPrediction[]
+  notes            String?
+  createdAt        DateTime            @default(now())
+  updatedAt        DateTime            @updatedAt
+  etaPredictions   EtaPrediction[]
+  tracking         TrackingPoint[]
+  organization     Organization        @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  assignments      VehicleAssignment[]
 
   @@unique([organizationId, plateNumber])
   @@index([organizationId, status])
@@ -189,7 +179,7 @@ model Vehicle {
 }
 
 model Driver {
-  id               String   @id @default(cuid())
+  id               String              @id @default(cuid())
   organizationId   String
   name             String
   phone            String
@@ -197,19 +187,18 @@ model Driver {
   licenseNumber    String
   licenseClass     String?
   licenseExpiry    DateTime
-  status           String   @default("AVAILABLE")
-  pin              String?
+  status           String              @default("AVAILABLE")
   bloodType        String?
   emergencyContact String?
   nextOfKinName    String?
   nextOfKinPhone   String?
   address          String?
   notes            String?
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
-
-  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
-  assignments  VehicleAssignment[]
+  createdAt        DateTime            @default(now())
+  updatedAt        DateTime            @updatedAt
+  pin              String?
+  organization     Organization        @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  assignments      VehicleAssignment[]
 
   @@unique([organizationId, phone])
   @@unique([organizationId, licenseNumber])
@@ -218,21 +207,20 @@ model Driver {
 }
 
 model VehicleAssignment {
-  id             String   @id @default(cuid())
+  id             String       @id @default(cuid())
   organizationId String
   vehicleId      String
   driverId       String
-  status         String   @default("ACTIVE")
-  startDate      DateTime @default(now())
+  status         String       @default("ACTIVE")
+  startDate      DateTime     @default(now())
   endDate        DateTime?
   notes          String?
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
-
-  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
-  vehicle      Vehicle      @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
-  driver       Driver       @relation(fields: [driverId], references: [id], onDelete: Cascade)
-  shipments    Shipment[]
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  shipments      Shipment[]
+  driver         Driver       @relation(fields: [driverId], references: [id], onDelete: Cascade)
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  vehicle        Vehicle      @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
 
   @@index([organizationId, status])
   @@index([organizationId, vehicleId, status])
@@ -241,47 +229,40 @@ model VehicleAssignment {
 }
 
 model Shipment {
-  id             String   @id @default(cuid())
-  organizationId String
-  trackingNumber String   @unique
-  status         String   @default("PENDING_PICKUP")
-
-  customerName    String
-  customerPhone   String?
-  customerEmail   String?
-
-  originAddress   String
-  originCity      String?
-  originLat       Float?
-  originLng       Float?
+  id                 String             @id @default(cuid())
+  organizationId     String
+  trackingNumber     String             @unique
+  status             String             @default("PENDING_PICKUP")
+  customerName       String
+  customerPhone      String?
+  customerEmail      String?
+  originAddress      String
+  originCity         String?
+  originLat          Float?
+  originLng          Float?
   destinationAddress String
   destinationCity    String?
   destinationLat     Float?
   destinationLng     Float?
-
-  cargoType        String
-  cargoDescription String?
-  weightKg         Float?
-  dimensions       String?
-  declaredValue    Float?
-
-  requestedPickupAt    DateTime?
-  estimatedDeliverAt   DateTime?
-  actualDeliveredAt    DateTime?
-  notes                String?
-  assignmentId         String?
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
-  events      ShipmentEvent[]
-  proofs      ProofOfDelivery[]
-  assignment  VehicleAssignment? @relation(fields: [assignmentId], references: [id], onDelete: SetNull)
-  route       Route? @relation(fields: [routeId], references: [id], onDelete: SetNull)
-  etaPredictions EtaPrediction[]
-
-  routeId String? @unique
+  cargoType          String
+  cargoDescription   String?
+  weightKg           Float?
+  dimensions         String?
+  declaredValue      Float?
+  requestedPickupAt  DateTime?
+  estimatedDeliverAt DateTime?
+  actualDeliveredAt  DateTime?
+  notes              String?
+  assignmentId       String?
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  routeId            String?            @unique
+  etaPredictions     EtaPrediction[]
+  proofs             ProofOfDelivery[]
+  assignment         VehicleAssignment? @relation(fields: [assignmentId], references: [id])
+  organization       Organization       @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  route              Route?             @relation(fields: [routeId], references: [id])
+  events             ShipmentEvent[]
 
   @@index([organizationId, status])
   @@index([organizationId, createdAt])
@@ -290,7 +271,7 @@ model Shipment {
 }
 
 model ShipmentEvent {
-  id             String   @id @default(cuid())
+  id             String       @id @default(cuid())
   organizationId String
   shipmentId     String
   eventType      String
@@ -299,39 +280,36 @@ model ShipmentEvent {
   latitude       Float?
   longitude      Float?
   createdById    String?
-  createdAt      DateTime @default(now())
-
-  shipment Shipment @relation(fields: [shipmentId], references: [id], onDelete: Cascade)
-  creator  User?    @relation(fields: [createdById], references: [id], onDelete: SetNull)
-  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  createdAt      DateTime     @default(now())
+  creator        User?        @relation(fields: [createdById], references: [id])
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  shipment       Shipment     @relation(fields: [shipmentId], references: [id], onDelete: Cascade)
 
   @@index([shipmentId, createdAt])
   @@index([organizationId, createdAt])
 }
 
 model Route {
-  id                    String   @id @default(cuid())
-  organizationId        String
-  name                  String
-  waypoints             Json
-  totalDistanceKm       Float?
-  estimatedDurationMin  Int?
-  geometry              Json?
-  notes                 String?
-  createdAt             DateTime @default(now())
-  updatedAt             DateTime @updatedAt
-
-  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
-  shipment      Shipment?
-
-  shipmentId String? @unique
+  id                   String       @id @default(cuid())
+  organizationId       String
+  name                 String
+  waypoints            Json
+  totalDistanceKm      Float?
+  estimatedDurationMin Int?
+  geometry             Json?
+  notes                String?
+  createdAt            DateTime     @default(now())
+  updatedAt            DateTime     @updatedAt
+  shipmentId           String?      @unique
+  organization         Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  shipment             Shipment?
 
   @@index([organizationId, createdAt])
   @@index([organizationId, name])
 }
 
 model TrackingPoint {
-  id             String   @id @default(cuid())
+  id             String       @id @default(cuid())
   organizationId String
   vehicleId      String
   lat            Float
@@ -339,12 +317,11 @@ model TrackingPoint {
   speedKmh       Float?
   headingDeg     Float?
   accuracyM      Float?
-  source         String   @default("PWA")
-  recordedAt     DateTime @default(now())
-  createdAt      DateTime @default(now())
-
-  vehicle      Vehicle      @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
-  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  source         String       @default("PWA")
+  recordedAt     DateTime     @default(now())
+  createdAt      DateTime     @default(now())
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  vehicle        Vehicle      @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
 
   @@index([organizationId, vehicleId, recordedAt])
   @@index([vehicleId, recordedAt])
@@ -352,22 +329,21 @@ model TrackingPoint {
 }
 
 model EtaPrediction {
-  id             String    @id @default(cuid())
-  organizationId String
-  shipmentId     String
-  vehicleId      String?
-  status         String
-  predictedAt    DateTime  @default(now())
-  remainingKm    Float?
-  predictedMinutes Int?
-  etaAt          DateTime?
-  speedUsedKmh   Float?
-  isDelayed      Boolean   @default(false)
+  id                String       @id @default(cuid())
+  organizationId    String
+  shipmentId        String
+  vehicleId         String?
+  status            String
+  predictedAt       DateTime     @default(now())
+  remainingKm       Float?
+  predictedMinutes  Int?
+  etaAt             DateTime?
+  speedUsedKmh      Float?
+  isDelayed         Boolean      @default(false)
   actualDeliveredAt DateTime?
-
-  shipment     Shipment     @relation(fields: [shipmentId], references: [id], onDelete: Cascade)
-  vehicle      Vehicle?     @relation(fields: [vehicleId], references: [id], onDelete: SetNull)
-  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  organization      Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  shipment          Shipment     @relation(fields: [shipmentId], references: [id], onDelete: Cascade)
+  vehicle           Vehicle?     @relation(fields: [vehicleId], references: [id])
 
   @@index([organizationId, shipmentId, predictedAt])
   @@index([shipmentId, predictedAt])
@@ -375,19 +351,18 @@ model EtaPrediction {
 }
 
 model Notification {
-  id             String   @id @default(cuid())
+  id             String       @id @default(cuid())
   organizationId String
   userId         String
   type           String
   title          String
   body           String?
   link           String?
-  read           Boolean  @default(false)
-  channel        String   @default("IN_APP")
-  createdAt      DateTime @default(now())
-
-  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
-  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  read           Boolean      @default(false)
+  channel        String       @default("IN_APP")
+  createdAt      DateTime     @default(now())
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId, read, createdAt])
   @@index([organizationId, userId, createdAt])
@@ -395,30 +370,29 @@ model Notification {
 }
 
 model NotificationPreference {
-  id             String   @id @default(cuid())
+  id             String       @id @default(cuid())
   organizationId String
   userId         String
-  shipmentStatus Boolean  @default(true)
-  vehicleAlert   Boolean  @default(true)
-  driverAlert    Boolean  @default(true)
-  systemAlert    Boolean  @default(true)
-  email          Boolean  @default(false)
-  sms            Boolean  @default(false)
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
-
-  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
-  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  shipmentStatus Boolean      @default(true)
+  vehicleAlert   Boolean      @default(true)
+  driverAlert    Boolean      @default(true)
+  systemAlert    Boolean      @default(true)
+  email          Boolean      @default(false)
+  sms            Boolean      @default(false)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([organizationId, userId])
   @@index([userId])
 }
 
 model ProofOfDelivery {
-  id             String   @id @default(cuid())
+  id             String       @id @default(cuid())
   organizationId String
   shipmentId     String
-  photos         Json     @default("[]")
+  photos         Json         @default("[]")
   signature      String?
   recipientName  String
   recipientPhone String?
@@ -426,10 +400,9 @@ model ProofOfDelivery {
   locationLat    Float?
   locationLng    Float?
   capturedByName String?
-  capturedAt     DateTime @default(now())
-
-  shipment     Shipment     @relation(fields: [shipmentId], references: [id], onDelete: Cascade)
-  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  capturedAt     DateTime     @default(now())
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  shipment       Shipment     @relation(fields: [shipmentId], references: [id], onDelete: Cascade)
 
   @@index([shipmentId])
   @@index([organizationId, capturedAt])

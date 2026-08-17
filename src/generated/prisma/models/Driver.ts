@@ -34,7 +34,6 @@ export type DriverMinAggregateOutputType = {
   licenseClass: string | null
   licenseExpiry: Date | null
   status: string | null
-  pin: string | null
   bloodType: string | null
   emergencyContact: string | null
   nextOfKinName: string | null
@@ -43,6 +42,7 @@ export type DriverMinAggregateOutputType = {
   notes: string | null
   createdAt: Date | null
   updatedAt: Date | null
+  pin: string | null
 }
 
 export type DriverMaxAggregateOutputType = {
@@ -55,7 +55,6 @@ export type DriverMaxAggregateOutputType = {
   licenseClass: string | null
   licenseExpiry: Date | null
   status: string | null
-  pin: string | null
   bloodType: string | null
   emergencyContact: string | null
   nextOfKinName: string | null
@@ -64,6 +63,7 @@ export type DriverMaxAggregateOutputType = {
   notes: string | null
   createdAt: Date | null
   updatedAt: Date | null
+  pin: string | null
 }
 
 export type DriverCountAggregateOutputType = {
@@ -76,7 +76,6 @@ export type DriverCountAggregateOutputType = {
   licenseClass: number
   licenseExpiry: number
   status: number
-  pin: number
   bloodType: number
   emergencyContact: number
   nextOfKinName: number
@@ -85,6 +84,7 @@ export type DriverCountAggregateOutputType = {
   notes: number
   createdAt: number
   updatedAt: number
+  pin: number
   _all: number
 }
 
@@ -99,7 +99,6 @@ export type DriverMinAggregateInputType = {
   licenseClass?: true
   licenseExpiry?: true
   status?: true
-  pin?: true
   bloodType?: true
   emergencyContact?: true
   nextOfKinName?: true
@@ -108,6 +107,7 @@ export type DriverMinAggregateInputType = {
   notes?: true
   createdAt?: true
   updatedAt?: true
+  pin?: true
 }
 
 export type DriverMaxAggregateInputType = {
@@ -120,7 +120,6 @@ export type DriverMaxAggregateInputType = {
   licenseClass?: true
   licenseExpiry?: true
   status?: true
-  pin?: true
   bloodType?: true
   emergencyContact?: true
   nextOfKinName?: true
@@ -129,6 +128,7 @@ export type DriverMaxAggregateInputType = {
   notes?: true
   createdAt?: true
   updatedAt?: true
+  pin?: true
 }
 
 export type DriverCountAggregateInputType = {
@@ -141,7 +141,6 @@ export type DriverCountAggregateInputType = {
   licenseClass?: true
   licenseExpiry?: true
   status?: true
-  pin?: true
   bloodType?: true
   emergencyContact?: true
   nextOfKinName?: true
@@ -150,6 +149,7 @@ export type DriverCountAggregateInputType = {
   notes?: true
   createdAt?: true
   updatedAt?: true
+  pin?: true
   _all?: true
 }
 
@@ -235,7 +235,6 @@ export type DriverGroupByOutputType = {
   licenseClass: string | null
   licenseExpiry: Date
   status: string
-  pin: string | null
   bloodType: string | null
   emergencyContact: string | null
   nextOfKinName: string | null
@@ -244,6 +243,7 @@ export type DriverGroupByOutputType = {
   notes: string | null
   createdAt: Date
   updatedAt: Date
+  pin: string | null
   _count: DriverCountAggregateOutputType | null
   _min: DriverMinAggregateOutputType | null
   _max: DriverMaxAggregateOutputType | null
@@ -277,7 +277,6 @@ export type DriverWhereInput = {
   licenseClass?: Prisma.StringNullableFilter<"Driver"> | string | null
   licenseExpiry?: Prisma.DateTimeFilter<"Driver"> | Date | string
   status?: Prisma.StringFilter<"Driver"> | string
-  pin?: Prisma.StringNullableFilter<"Driver"> | string | null
   bloodType?: Prisma.StringNullableFilter<"Driver"> | string | null
   emergencyContact?: Prisma.StringNullableFilter<"Driver"> | string | null
   nextOfKinName?: Prisma.StringNullableFilter<"Driver"> | string | null
@@ -286,6 +285,7 @@ export type DriverWhereInput = {
   notes?: Prisma.StringNullableFilter<"Driver"> | string | null
   createdAt?: Prisma.DateTimeFilter<"Driver"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Driver"> | Date | string
+  pin?: Prisma.StringNullableFilter<"Driver"> | string | null
   organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
   assignments?: Prisma.VehicleAssignmentListRelationFilter
 }
@@ -300,7 +300,6 @@ export type DriverOrderByWithRelationInput = {
   licenseClass?: Prisma.SortOrderInput | Prisma.SortOrder
   licenseExpiry?: Prisma.SortOrder
   status?: Prisma.SortOrder
-  pin?: Prisma.SortOrderInput | Prisma.SortOrder
   bloodType?: Prisma.SortOrderInput | Prisma.SortOrder
   emergencyContact?: Prisma.SortOrderInput | Prisma.SortOrder
   nextOfKinName?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -309,6 +308,7 @@ export type DriverOrderByWithRelationInput = {
   notes?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
+  pin?: Prisma.SortOrderInput | Prisma.SortOrder
   organization?: Prisma.OrganizationOrderByWithRelationInput
   assignments?: Prisma.VehicleAssignmentOrderByRelationAggregateInput
 }
@@ -328,7 +328,6 @@ export type DriverWhereUniqueInput = Prisma.AtLeast<{
   licenseClass?: Prisma.StringNullableFilter<"Driver"> | string | null
   licenseExpiry?: Prisma.DateTimeFilter<"Driver"> | Date | string
   status?: Prisma.StringFilter<"Driver"> | string
-  pin?: Prisma.StringNullableFilter<"Driver"> | string | null
   bloodType?: Prisma.StringNullableFilter<"Driver"> | string | null
   emergencyContact?: Prisma.StringNullableFilter<"Driver"> | string | null
   nextOfKinName?: Prisma.StringNullableFilter<"Driver"> | string | null
@@ -337,6 +336,7 @@ export type DriverWhereUniqueInput = Prisma.AtLeast<{
   notes?: Prisma.StringNullableFilter<"Driver"> | string | null
   createdAt?: Prisma.DateTimeFilter<"Driver"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Driver"> | Date | string
+  pin?: Prisma.StringNullableFilter<"Driver"> | string | null
   organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
   assignments?: Prisma.VehicleAssignmentListRelationFilter
 }, "id" | "organizationId_phone" | "organizationId_licenseNumber">
@@ -351,7 +351,6 @@ export type DriverOrderByWithAggregationInput = {
   licenseClass?: Prisma.SortOrderInput | Prisma.SortOrder
   licenseExpiry?: Prisma.SortOrder
   status?: Prisma.SortOrder
-  pin?: Prisma.SortOrderInput | Prisma.SortOrder
   bloodType?: Prisma.SortOrderInput | Prisma.SortOrder
   emergencyContact?: Prisma.SortOrderInput | Prisma.SortOrder
   nextOfKinName?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -360,6 +359,7 @@ export type DriverOrderByWithAggregationInput = {
   notes?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
+  pin?: Prisma.SortOrderInput | Prisma.SortOrder
   _count?: Prisma.DriverCountOrderByAggregateInput
   _max?: Prisma.DriverMaxOrderByAggregateInput
   _min?: Prisma.DriverMinOrderByAggregateInput
@@ -378,7 +378,6 @@ export type DriverScalarWhereWithAggregatesInput = {
   licenseClass?: Prisma.StringNullableWithAggregatesFilter<"Driver"> | string | null
   licenseExpiry?: Prisma.DateTimeWithAggregatesFilter<"Driver"> | Date | string
   status?: Prisma.StringWithAggregatesFilter<"Driver"> | string
-  pin?: Prisma.StringNullableWithAggregatesFilter<"Driver"> | string | null
   bloodType?: Prisma.StringNullableWithAggregatesFilter<"Driver"> | string | null
   emergencyContact?: Prisma.StringNullableWithAggregatesFilter<"Driver"> | string | null
   nextOfKinName?: Prisma.StringNullableWithAggregatesFilter<"Driver"> | string | null
@@ -387,6 +386,7 @@ export type DriverScalarWhereWithAggregatesInput = {
   notes?: Prisma.StringNullableWithAggregatesFilter<"Driver"> | string | null
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"Driver"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Driver"> | Date | string
+  pin?: Prisma.StringNullableWithAggregatesFilter<"Driver"> | string | null
 }
 
 export type DriverCreateInput = {
@@ -398,7 +398,6 @@ export type DriverCreateInput = {
   licenseClass?: string | null
   licenseExpiry: Date | string
   status?: string
-  pin?: string | null
   bloodType?: string | null
   emergencyContact?: string | null
   nextOfKinName?: string | null
@@ -407,6 +406,7 @@ export type DriverCreateInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
+  pin?: string | null
   organization: Prisma.OrganizationCreateNestedOneWithoutDriversInput
   assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutDriverInput
 }
@@ -421,7 +421,6 @@ export type DriverUncheckedCreateInput = {
   licenseClass?: string | null
   licenseExpiry: Date | string
   status?: string
-  pin?: string | null
   bloodType?: string | null
   emergencyContact?: string | null
   nextOfKinName?: string | null
@@ -430,6 +429,7 @@ export type DriverUncheckedCreateInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
+  pin?: string | null
   assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutDriverInput
 }
 
@@ -442,7 +442,6 @@ export type DriverUpdateInput = {
   licenseClass?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   licenseExpiry?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
-  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bloodType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   emergencyContact?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   nextOfKinName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -451,6 +450,7 @@ export type DriverUpdateInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   organization?: Prisma.OrganizationUpdateOneRequiredWithoutDriversNestedInput
   assignments?: Prisma.VehicleAssignmentUpdateManyWithoutDriverNestedInput
 }
@@ -465,7 +465,6 @@ export type DriverUncheckedUpdateInput = {
   licenseClass?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   licenseExpiry?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
-  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bloodType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   emergencyContact?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   nextOfKinName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -474,6 +473,7 @@ export type DriverUncheckedUpdateInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutDriverNestedInput
 }
 
@@ -487,7 +487,6 @@ export type DriverCreateManyInput = {
   licenseClass?: string | null
   licenseExpiry: Date | string
   status?: string
-  pin?: string | null
   bloodType?: string | null
   emergencyContact?: string | null
   nextOfKinName?: string | null
@@ -496,6 +495,7 @@ export type DriverCreateManyInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
+  pin?: string | null
 }
 
 export type DriverUpdateManyMutationInput = {
@@ -507,7 +507,6 @@ export type DriverUpdateManyMutationInput = {
   licenseClass?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   licenseExpiry?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
-  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bloodType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   emergencyContact?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   nextOfKinName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -516,6 +515,7 @@ export type DriverUpdateManyMutationInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type DriverUncheckedUpdateManyInput = {
@@ -528,7 +528,6 @@ export type DriverUncheckedUpdateManyInput = {
   licenseClass?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   licenseExpiry?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
-  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bloodType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   emergencyContact?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   nextOfKinName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -537,6 +536,7 @@ export type DriverUncheckedUpdateManyInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type DriverListRelationFilter = {
@@ -569,7 +569,6 @@ export type DriverCountOrderByAggregateInput = {
   licenseClass?: Prisma.SortOrder
   licenseExpiry?: Prisma.SortOrder
   status?: Prisma.SortOrder
-  pin?: Prisma.SortOrder
   bloodType?: Prisma.SortOrder
   emergencyContact?: Prisma.SortOrder
   nextOfKinName?: Prisma.SortOrder
@@ -578,6 +577,7 @@ export type DriverCountOrderByAggregateInput = {
   notes?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
+  pin?: Prisma.SortOrder
 }
 
 export type DriverMaxOrderByAggregateInput = {
@@ -590,7 +590,6 @@ export type DriverMaxOrderByAggregateInput = {
   licenseClass?: Prisma.SortOrder
   licenseExpiry?: Prisma.SortOrder
   status?: Prisma.SortOrder
-  pin?: Prisma.SortOrder
   bloodType?: Prisma.SortOrder
   emergencyContact?: Prisma.SortOrder
   nextOfKinName?: Prisma.SortOrder
@@ -599,6 +598,7 @@ export type DriverMaxOrderByAggregateInput = {
   notes?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
+  pin?: Prisma.SortOrder
 }
 
 export type DriverMinOrderByAggregateInput = {
@@ -611,7 +611,6 @@ export type DriverMinOrderByAggregateInput = {
   licenseClass?: Prisma.SortOrder
   licenseExpiry?: Prisma.SortOrder
   status?: Prisma.SortOrder
-  pin?: Prisma.SortOrder
   bloodType?: Prisma.SortOrder
   emergencyContact?: Prisma.SortOrder
   nextOfKinName?: Prisma.SortOrder
@@ -620,6 +619,7 @@ export type DriverMinOrderByAggregateInput = {
   notes?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
+  pin?: Prisma.SortOrder
 }
 
 export type DriverScalarRelationFilter = {
@@ -692,7 +692,6 @@ export type DriverCreateWithoutOrganizationInput = {
   licenseClass?: string | null
   licenseExpiry: Date | string
   status?: string
-  pin?: string | null
   bloodType?: string | null
   emergencyContact?: string | null
   nextOfKinName?: string | null
@@ -701,6 +700,7 @@ export type DriverCreateWithoutOrganizationInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
+  pin?: string | null
   assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutDriverInput
 }
 
@@ -713,7 +713,6 @@ export type DriverUncheckedCreateWithoutOrganizationInput = {
   licenseClass?: string | null
   licenseExpiry: Date | string
   status?: string
-  pin?: string | null
   bloodType?: string | null
   emergencyContact?: string | null
   nextOfKinName?: string | null
@@ -722,6 +721,7 @@ export type DriverUncheckedCreateWithoutOrganizationInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
+  pin?: string | null
   assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutDriverInput
 }
 
@@ -764,7 +764,6 @@ export type DriverScalarWhereInput = {
   licenseClass?: Prisma.StringNullableFilter<"Driver"> | string | null
   licenseExpiry?: Prisma.DateTimeFilter<"Driver"> | Date | string
   status?: Prisma.StringFilter<"Driver"> | string
-  pin?: Prisma.StringNullableFilter<"Driver"> | string | null
   bloodType?: Prisma.StringNullableFilter<"Driver"> | string | null
   emergencyContact?: Prisma.StringNullableFilter<"Driver"> | string | null
   nextOfKinName?: Prisma.StringNullableFilter<"Driver"> | string | null
@@ -773,6 +772,7 @@ export type DriverScalarWhereInput = {
   notes?: Prisma.StringNullableFilter<"Driver"> | string | null
   createdAt?: Prisma.DateTimeFilter<"Driver"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Driver"> | Date | string
+  pin?: Prisma.StringNullableFilter<"Driver"> | string | null
 }
 
 export type DriverCreateWithoutAssignmentsInput = {
@@ -784,7 +784,6 @@ export type DriverCreateWithoutAssignmentsInput = {
   licenseClass?: string | null
   licenseExpiry: Date | string
   status?: string
-  pin?: string | null
   bloodType?: string | null
   emergencyContact?: string | null
   nextOfKinName?: string | null
@@ -793,6 +792,7 @@ export type DriverCreateWithoutAssignmentsInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
+  pin?: string | null
   organization: Prisma.OrganizationCreateNestedOneWithoutDriversInput
 }
 
@@ -806,7 +806,6 @@ export type DriverUncheckedCreateWithoutAssignmentsInput = {
   licenseClass?: string | null
   licenseExpiry: Date | string
   status?: string
-  pin?: string | null
   bloodType?: string | null
   emergencyContact?: string | null
   nextOfKinName?: string | null
@@ -815,6 +814,7 @@ export type DriverUncheckedCreateWithoutAssignmentsInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
+  pin?: string | null
 }
 
 export type DriverCreateOrConnectWithoutAssignmentsInput = {
@@ -842,7 +842,6 @@ export type DriverUpdateWithoutAssignmentsInput = {
   licenseClass?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   licenseExpiry?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
-  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bloodType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   emergencyContact?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   nextOfKinName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -851,6 +850,7 @@ export type DriverUpdateWithoutAssignmentsInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   organization?: Prisma.OrganizationUpdateOneRequiredWithoutDriversNestedInput
 }
 
@@ -864,7 +864,6 @@ export type DriverUncheckedUpdateWithoutAssignmentsInput = {
   licenseClass?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   licenseExpiry?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
-  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bloodType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   emergencyContact?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   nextOfKinName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -873,6 +872,7 @@ export type DriverUncheckedUpdateWithoutAssignmentsInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type DriverCreateManyOrganizationInput = {
@@ -884,7 +884,6 @@ export type DriverCreateManyOrganizationInput = {
   licenseClass?: string | null
   licenseExpiry: Date | string
   status?: string
-  pin?: string | null
   bloodType?: string | null
   emergencyContact?: string | null
   nextOfKinName?: string | null
@@ -893,6 +892,7 @@ export type DriverCreateManyOrganizationInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
+  pin?: string | null
 }
 
 export type DriverUpdateWithoutOrganizationInput = {
@@ -904,7 +904,6 @@ export type DriverUpdateWithoutOrganizationInput = {
   licenseClass?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   licenseExpiry?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
-  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bloodType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   emergencyContact?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   nextOfKinName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -913,6 +912,7 @@ export type DriverUpdateWithoutOrganizationInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assignments?: Prisma.VehicleAssignmentUpdateManyWithoutDriverNestedInput
 }
 
@@ -925,7 +925,6 @@ export type DriverUncheckedUpdateWithoutOrganizationInput = {
   licenseClass?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   licenseExpiry?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
-  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bloodType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   emergencyContact?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   nextOfKinName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -934,6 +933,7 @@ export type DriverUncheckedUpdateWithoutOrganizationInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutDriverNestedInput
 }
 
@@ -946,7 +946,6 @@ export type DriverUncheckedUpdateManyWithoutOrganizationInput = {
   licenseClass?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   licenseExpiry?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
-  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bloodType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   emergencyContact?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   nextOfKinName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -955,6 +954,7 @@ export type DriverUncheckedUpdateManyWithoutOrganizationInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pin?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 
@@ -998,7 +998,6 @@ export type DriverSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs =
   licenseClass?: boolean
   licenseExpiry?: boolean
   status?: boolean
-  pin?: boolean
   bloodType?: boolean
   emergencyContact?: boolean
   nextOfKinName?: boolean
@@ -1007,6 +1006,7 @@ export type DriverSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs =
   notes?: boolean
   createdAt?: boolean
   updatedAt?: boolean
+  pin?: boolean
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   assignments?: boolean | Prisma.Driver$assignmentsArgs<ExtArgs>
   _count?: boolean | Prisma.DriverCountOutputTypeDefaultArgs<ExtArgs>
@@ -1022,7 +1022,6 @@ export type DriverSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extens
   licenseClass?: boolean
   licenseExpiry?: boolean
   status?: boolean
-  pin?: boolean
   bloodType?: boolean
   emergencyContact?: boolean
   nextOfKinName?: boolean
@@ -1031,6 +1030,7 @@ export type DriverSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extens
   notes?: boolean
   createdAt?: boolean
   updatedAt?: boolean
+  pin?: boolean
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["driver"]>
 
@@ -1044,7 +1044,6 @@ export type DriverSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extens
   licenseClass?: boolean
   licenseExpiry?: boolean
   status?: boolean
-  pin?: boolean
   bloodType?: boolean
   emergencyContact?: boolean
   nextOfKinName?: boolean
@@ -1053,6 +1052,7 @@ export type DriverSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extens
   notes?: boolean
   createdAt?: boolean
   updatedAt?: boolean
+  pin?: boolean
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["driver"]>
 
@@ -1066,7 +1066,6 @@ export type DriverSelectScalar = {
   licenseClass?: boolean
   licenseExpiry?: boolean
   status?: boolean
-  pin?: boolean
   bloodType?: boolean
   emergencyContact?: boolean
   nextOfKinName?: boolean
@@ -1075,9 +1074,10 @@ export type DriverSelectScalar = {
   notes?: boolean
   createdAt?: boolean
   updatedAt?: boolean
+  pin?: boolean
 }
 
-export type DriverOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "organizationId" | "name" | "phone" | "email" | "licenseNumber" | "licenseClass" | "licenseExpiry" | "status" | "pin" | "bloodType" | "emergencyContact" | "nextOfKinName" | "nextOfKinPhone" | "address" | "notes" | "createdAt" | "updatedAt", ExtArgs["result"]["driver"]>
+export type DriverOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "organizationId" | "name" | "phone" | "email" | "licenseNumber" | "licenseClass" | "licenseExpiry" | "status" | "bloodType" | "emergencyContact" | "nextOfKinName" | "nextOfKinPhone" | "address" | "notes" | "createdAt" | "updatedAt" | "pin", ExtArgs["result"]["driver"]>
 export type DriverInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   assignments?: boolean | Prisma.Driver$assignmentsArgs<ExtArgs>
@@ -1106,7 +1106,6 @@ export type $DriverPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs
     licenseClass: string | null
     licenseExpiry: Date
     status: string
-    pin: string | null
     bloodType: string | null
     emergencyContact: string | null
     nextOfKinName: string | null
@@ -1115,6 +1114,7 @@ export type $DriverPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs
     notes: string | null
     createdAt: Date
     updatedAt: Date
+    pin: string | null
   }, ExtArgs["result"]["driver"]>
   composites: {}
 }
@@ -1549,7 +1549,6 @@ export interface DriverFieldRefs {
   readonly licenseClass: Prisma.FieldRef<"Driver", 'String'>
   readonly licenseExpiry: Prisma.FieldRef<"Driver", 'DateTime'>
   readonly status: Prisma.FieldRef<"Driver", 'String'>
-  readonly pin: Prisma.FieldRef<"Driver", 'String'>
   readonly bloodType: Prisma.FieldRef<"Driver", 'String'>
   readonly emergencyContact: Prisma.FieldRef<"Driver", 'String'>
   readonly nextOfKinName: Prisma.FieldRef<"Driver", 'String'>
@@ -1558,6 +1557,7 @@ export interface DriverFieldRefs {
   readonly notes: Prisma.FieldRef<"Driver", 'String'>
   readonly createdAt: Prisma.FieldRef<"Driver", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"Driver", 'DateTime'>
+  readonly pin: Prisma.FieldRef<"Driver", 'String'>
 }
     
 

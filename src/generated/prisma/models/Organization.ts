@@ -226,20 +226,20 @@ export type OrganizationWhereInput = {
   currency?: Prisma.StringFilter<"Organization"> | string
   timezone?: Prisma.StringFilter<"Organization"> | string
   industry?: Prisma.StringNullableFilter<"Organization"> | string | null
-  members?: Prisma.MemberListRelationFilter
-  invitations?: Prisma.InvitationListRelationFilter
   auditLogs?: Prisma.AuditLogListRelationFilter
-  vehicles?: Prisma.VehicleListRelationFilter
   drivers?: Prisma.DriverListRelationFilter
-  assignments?: Prisma.VehicleAssignmentListRelationFilter
-  shipments?: Prisma.ShipmentListRelationFilter
-  shipmentEvents?: Prisma.ShipmentEventListRelationFilter
-  routes?: Prisma.RouteListRelationFilter
-  tracking?: Prisma.TrackingPointListRelationFilter
   etaPredictions?: Prisma.EtaPredictionListRelationFilter
+  invitations?: Prisma.InvitationListRelationFilter
+  members?: Prisma.MemberListRelationFilter
   notifications?: Prisma.NotificationListRelationFilter
   notificationPrefs?: Prisma.NotificationPreferenceListRelationFilter
   proofs?: Prisma.ProofOfDeliveryListRelationFilter
+  routes?: Prisma.RouteListRelationFilter
+  shipments?: Prisma.ShipmentListRelationFilter
+  shipmentEvents?: Prisma.ShipmentEventListRelationFilter
+  tracking?: Prisma.TrackingPointListRelationFilter
+  vehicles?: Prisma.VehicleListRelationFilter
+  assignments?: Prisma.VehicleAssignmentListRelationFilter
 }
 
 export type OrganizationOrderByWithRelationInput = {
@@ -254,20 +254,20 @@ export type OrganizationOrderByWithRelationInput = {
   currency?: Prisma.SortOrder
   timezone?: Prisma.SortOrder
   industry?: Prisma.SortOrderInput | Prisma.SortOrder
-  members?: Prisma.MemberOrderByRelationAggregateInput
-  invitations?: Prisma.InvitationOrderByRelationAggregateInput
   auditLogs?: Prisma.AuditLogOrderByRelationAggregateInput
-  vehicles?: Prisma.VehicleOrderByRelationAggregateInput
   drivers?: Prisma.DriverOrderByRelationAggregateInput
-  assignments?: Prisma.VehicleAssignmentOrderByRelationAggregateInput
-  shipments?: Prisma.ShipmentOrderByRelationAggregateInput
-  shipmentEvents?: Prisma.ShipmentEventOrderByRelationAggregateInput
-  routes?: Prisma.RouteOrderByRelationAggregateInput
-  tracking?: Prisma.TrackingPointOrderByRelationAggregateInput
   etaPredictions?: Prisma.EtaPredictionOrderByRelationAggregateInput
+  invitations?: Prisma.InvitationOrderByRelationAggregateInput
+  members?: Prisma.MemberOrderByRelationAggregateInput
   notifications?: Prisma.NotificationOrderByRelationAggregateInput
   notificationPrefs?: Prisma.NotificationPreferenceOrderByRelationAggregateInput
   proofs?: Prisma.ProofOfDeliveryOrderByRelationAggregateInput
+  routes?: Prisma.RouteOrderByRelationAggregateInput
+  shipments?: Prisma.ShipmentOrderByRelationAggregateInput
+  shipmentEvents?: Prisma.ShipmentEventOrderByRelationAggregateInput
+  tracking?: Prisma.TrackingPointOrderByRelationAggregateInput
+  vehicles?: Prisma.VehicleOrderByRelationAggregateInput
+  assignments?: Prisma.VehicleAssignmentOrderByRelationAggregateInput
 }
 
 export type OrganizationWhereUniqueInput = Prisma.AtLeast<{
@@ -285,20 +285,20 @@ export type OrganizationWhereUniqueInput = Prisma.AtLeast<{
   currency?: Prisma.StringFilter<"Organization"> | string
   timezone?: Prisma.StringFilter<"Organization"> | string
   industry?: Prisma.StringNullableFilter<"Organization"> | string | null
-  members?: Prisma.MemberListRelationFilter
-  invitations?: Prisma.InvitationListRelationFilter
   auditLogs?: Prisma.AuditLogListRelationFilter
-  vehicles?: Prisma.VehicleListRelationFilter
   drivers?: Prisma.DriverListRelationFilter
-  assignments?: Prisma.VehicleAssignmentListRelationFilter
-  shipments?: Prisma.ShipmentListRelationFilter
-  shipmentEvents?: Prisma.ShipmentEventListRelationFilter
-  routes?: Prisma.RouteListRelationFilter
-  tracking?: Prisma.TrackingPointListRelationFilter
   etaPredictions?: Prisma.EtaPredictionListRelationFilter
+  invitations?: Prisma.InvitationListRelationFilter
+  members?: Prisma.MemberListRelationFilter
   notifications?: Prisma.NotificationListRelationFilter
   notificationPrefs?: Prisma.NotificationPreferenceListRelationFilter
   proofs?: Prisma.ProofOfDeliveryListRelationFilter
+  routes?: Prisma.RouteListRelationFilter
+  shipments?: Prisma.ShipmentListRelationFilter
+  shipmentEvents?: Prisma.ShipmentEventListRelationFilter
+  tracking?: Prisma.TrackingPointListRelationFilter
+  vehicles?: Prisma.VehicleListRelationFilter
+  assignments?: Prisma.VehicleAssignmentListRelationFilter
 }, "id" | "slug">
 
 export type OrganizationOrderByWithAggregationInput = {
@@ -347,20 +347,20 @@ export type OrganizationCreateInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateInput = {
@@ -375,20 +375,20 @@ export type OrganizationUncheckedCreateInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverUncheckedCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUpdateInput = {
@@ -403,20 +403,20 @@ export type OrganizationUpdateInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateInput = {
@@ -431,20 +431,20 @@ export type OrganizationUncheckedUpdateInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUncheckedUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateManyInput = {
@@ -742,19 +742,19 @@ export type OrganizationCreateWithoutMembersInput = {
   currency: string
   timezone: string
   industry?: string | null
-  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutMembersInput = {
@@ -769,19 +769,19 @@ export type OrganizationUncheckedCreateWithoutMembersInput = {
   currency: string
   timezone: string
   industry?: string | null
-  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverUncheckedCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutMembersInput = {
@@ -812,19 +812,19 @@ export type OrganizationUpdateWithoutMembersInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutMembersInput = {
@@ -839,19 +839,19 @@ export type OrganizationUncheckedUpdateWithoutMembersInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUncheckedUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutInvitationsInput = {
@@ -866,19 +866,19 @@ export type OrganizationCreateWithoutInvitationsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutInvitationsInput = {
@@ -893,19 +893,19 @@ export type OrganizationUncheckedCreateWithoutInvitationsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverUncheckedCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutInvitationsInput = {
@@ -936,19 +936,19 @@ export type OrganizationUpdateWithoutInvitationsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutInvitationsInput = {
@@ -963,19 +963,19 @@ export type OrganizationUncheckedUpdateWithoutInvitationsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUncheckedUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutAuditLogsInput = {
@@ -990,19 +990,19 @@ export type OrganizationCreateWithoutAuditLogsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutAuditLogsInput = {
@@ -1017,19 +1017,19 @@ export type OrganizationUncheckedCreateWithoutAuditLogsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverUncheckedCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutAuditLogsInput = {
@@ -1060,19 +1060,19 @@ export type OrganizationUpdateWithoutAuditLogsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutAuditLogsInput = {
@@ -1087,19 +1087,19 @@ export type OrganizationUncheckedUpdateWithoutAuditLogsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUncheckedUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutVehiclesInput = {
@@ -1114,19 +1114,19 @@ export type OrganizationCreateWithoutVehiclesInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutVehiclesInput = {
@@ -1141,19 +1141,19 @@ export type OrganizationUncheckedCreateWithoutVehiclesInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverUncheckedCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutVehiclesInput = {
@@ -1184,19 +1184,19 @@ export type OrganizationUpdateWithoutVehiclesInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutVehiclesInput = {
@@ -1211,19 +1211,19 @@ export type OrganizationUncheckedUpdateWithoutVehiclesInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUncheckedUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutDriversInput = {
@@ -1238,19 +1238,19 @@ export type OrganizationCreateWithoutDriversInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutDriversInput = {
@@ -1265,19 +1265,19 @@ export type OrganizationUncheckedCreateWithoutDriversInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutDriversInput = {
@@ -1308,19 +1308,19 @@ export type OrganizationUpdateWithoutDriversInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutDriversInput = {
@@ -1335,19 +1335,19 @@ export type OrganizationUncheckedUpdateWithoutDriversInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutAssignmentsInput = {
@@ -1362,19 +1362,19 @@ export type OrganizationCreateWithoutAssignmentsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutAssignmentsInput = {
@@ -1389,19 +1389,19 @@ export type OrganizationUncheckedCreateWithoutAssignmentsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverUncheckedCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutAssignmentsInput = {
@@ -1432,19 +1432,19 @@ export type OrganizationUpdateWithoutAssignmentsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutAssignmentsInput = {
@@ -1459,19 +1459,19 @@ export type OrganizationUncheckedUpdateWithoutAssignmentsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutShipmentsInput = {
@@ -1486,19 +1486,19 @@ export type OrganizationCreateWithoutShipmentsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutShipmentsInput = {
@@ -1513,19 +1513,19 @@ export type OrganizationUncheckedCreateWithoutShipmentsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverUncheckedCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutShipmentsInput = {
@@ -1556,19 +1556,19 @@ export type OrganizationUpdateWithoutShipmentsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutShipmentsInput = {
@@ -1583,19 +1583,19 @@ export type OrganizationUncheckedUpdateWithoutShipmentsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUncheckedUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutShipmentEventsInput = {
@@ -1610,19 +1610,19 @@ export type OrganizationCreateWithoutShipmentEventsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutShipmentEventsInput = {
@@ -1637,19 +1637,19 @@ export type OrganizationUncheckedCreateWithoutShipmentEventsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverUncheckedCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutShipmentEventsInput = {
@@ -1680,19 +1680,19 @@ export type OrganizationUpdateWithoutShipmentEventsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutShipmentEventsInput = {
@@ -1707,19 +1707,19 @@ export type OrganizationUncheckedUpdateWithoutShipmentEventsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUncheckedUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutRoutesInput = {
@@ -1734,19 +1734,19 @@ export type OrganizationCreateWithoutRoutesInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutRoutesInput = {
@@ -1761,19 +1761,19 @@ export type OrganizationUncheckedCreateWithoutRoutesInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverUncheckedCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutRoutesInput = {
@@ -1804,19 +1804,19 @@ export type OrganizationUpdateWithoutRoutesInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutRoutesInput = {
@@ -1831,19 +1831,19 @@ export type OrganizationUncheckedUpdateWithoutRoutesInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUncheckedUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutTrackingInput = {
@@ -1858,19 +1858,19 @@ export type OrganizationCreateWithoutTrackingInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutTrackingInput = {
@@ -1885,19 +1885,19 @@ export type OrganizationUncheckedCreateWithoutTrackingInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverUncheckedCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutTrackingInput = {
@@ -1928,19 +1928,19 @@ export type OrganizationUpdateWithoutTrackingInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutTrackingInput = {
@@ -1955,19 +1955,19 @@ export type OrganizationUncheckedUpdateWithoutTrackingInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUncheckedUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutEtaPredictionsInput = {
@@ -1982,19 +1982,19 @@ export type OrganizationCreateWithoutEtaPredictionsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutEtaPredictionsInput = {
@@ -2009,19 +2009,19 @@ export type OrganizationUncheckedCreateWithoutEtaPredictionsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverUncheckedCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutEtaPredictionsInput = {
@@ -2052,19 +2052,19 @@ export type OrganizationUpdateWithoutEtaPredictionsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutEtaPredictionsInput = {
@@ -2079,19 +2079,19 @@ export type OrganizationUncheckedUpdateWithoutEtaPredictionsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUncheckedUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutNotificationsInput = {
@@ -2106,19 +2106,19 @@ export type OrganizationCreateWithoutNotificationsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutNotificationsInput = {
@@ -2133,19 +2133,19 @@ export type OrganizationUncheckedCreateWithoutNotificationsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverUncheckedCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutNotificationsInput = {
@@ -2176,19 +2176,19 @@ export type OrganizationUpdateWithoutNotificationsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutNotificationsInput = {
@@ -2203,19 +2203,19 @@ export type OrganizationUncheckedUpdateWithoutNotificationsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUncheckedUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutNotificationPrefsInput = {
@@ -2230,19 +2230,19 @@ export type OrganizationCreateWithoutNotificationPrefsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutNotificationPrefsInput = {
@@ -2257,19 +2257,19 @@ export type OrganizationUncheckedCreateWithoutNotificationPrefsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverUncheckedCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   proofs?: Prisma.ProofOfDeliveryUncheckedCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutNotificationPrefsInput = {
@@ -2300,19 +2300,19 @@ export type OrganizationUpdateWithoutNotificationPrefsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutNotificationPrefsInput = {
@@ -2327,19 +2327,19 @@ export type OrganizationUncheckedUpdateWithoutNotificationPrefsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUncheckedUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   proofs?: Prisma.ProofOfDeliveryUncheckedUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutProofsInput = {
@@ -2354,19 +2354,19 @@ export type OrganizationCreateWithoutProofsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutProofsInput = {
@@ -2381,19 +2381,19 @@ export type OrganizationUncheckedCreateWithoutProofsInput = {
   currency: string
   timezone: string
   industry?: string | null
-  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
-  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
   auditLogs?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOrganizationInput
-  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
   drivers?: Prisma.DriverUncheckedCreateNestedManyWithoutOrganizationInput
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
-  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutOrganizationInput
+  invitations?: Prisma.InvitationUncheckedCreateNestedManyWithoutOrganizationInput
+  members?: Prisma.MemberUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedCreateNestedManyWithoutOrganizationInput
+  routes?: Prisma.RouteUncheckedCreateNestedManyWithoutOrganizationInput
+  shipments?: Prisma.ShipmentUncheckedCreateNestedManyWithoutOrganizationInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedCreateNestedManyWithoutOrganizationInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutProofsInput = {
@@ -2424,19 +2424,19 @@ export type OrganizationUpdateWithoutProofsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutProofsInput = {
@@ -2451,19 +2451,19 @@ export type OrganizationUncheckedUpdateWithoutProofsInput = {
   currency?: Prisma.StringFieldUpdateOperationsInput | string
   timezone?: Prisma.StringFieldUpdateOperationsInput | string
   industry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
-  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
   auditLogs?: Prisma.AuditLogUncheckedUpdateManyWithoutOrganizationNestedInput
-  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
   drivers?: Prisma.DriverUncheckedUpdateManyWithoutOrganizationNestedInput
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
-  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
-  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutOrganizationNestedInput
+  invitations?: Prisma.InvitationUncheckedUpdateManyWithoutOrganizationNestedInput
+  members?: Prisma.MemberUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   notificationPrefs?: Prisma.NotificationPreferenceUncheckedUpdateManyWithoutOrganizationNestedInput
+  routes?: Prisma.RouteUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipments?: Prisma.ShipmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  shipmentEvents?: Prisma.ShipmentEventUncheckedUpdateManyWithoutOrganizationNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 
@@ -2472,37 +2472,37 @@ export type OrganizationUncheckedUpdateWithoutProofsInput = {
  */
 
 export type OrganizationCountOutputType = {
-  members: number
-  invitations: number
   auditLogs: number
-  vehicles: number
   drivers: number
-  assignments: number
-  shipments: number
-  shipmentEvents: number
-  routes: number
-  tracking: number
   etaPredictions: number
+  invitations: number
+  members: number
   notifications: number
   notificationPrefs: number
   proofs: number
+  routes: number
+  shipments: number
+  shipmentEvents: number
+  tracking: number
+  vehicles: number
+  assignments: number
 }
 
 export type OrganizationCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  members?: boolean | OrganizationCountOutputTypeCountMembersArgs
-  invitations?: boolean | OrganizationCountOutputTypeCountInvitationsArgs
   auditLogs?: boolean | OrganizationCountOutputTypeCountAuditLogsArgs
-  vehicles?: boolean | OrganizationCountOutputTypeCountVehiclesArgs
   drivers?: boolean | OrganizationCountOutputTypeCountDriversArgs
-  assignments?: boolean | OrganizationCountOutputTypeCountAssignmentsArgs
-  shipments?: boolean | OrganizationCountOutputTypeCountShipmentsArgs
-  shipmentEvents?: boolean | OrganizationCountOutputTypeCountShipmentEventsArgs
-  routes?: boolean | OrganizationCountOutputTypeCountRoutesArgs
-  tracking?: boolean | OrganizationCountOutputTypeCountTrackingArgs
   etaPredictions?: boolean | OrganizationCountOutputTypeCountEtaPredictionsArgs
+  invitations?: boolean | OrganizationCountOutputTypeCountInvitationsArgs
+  members?: boolean | OrganizationCountOutputTypeCountMembersArgs
   notifications?: boolean | OrganizationCountOutputTypeCountNotificationsArgs
   notificationPrefs?: boolean | OrganizationCountOutputTypeCountNotificationPrefsArgs
   proofs?: boolean | OrganizationCountOutputTypeCountProofsArgs
+  routes?: boolean | OrganizationCountOutputTypeCountRoutesArgs
+  shipments?: boolean | OrganizationCountOutputTypeCountShipmentsArgs
+  shipmentEvents?: boolean | OrganizationCountOutputTypeCountShipmentEventsArgs
+  tracking?: boolean | OrganizationCountOutputTypeCountTrackingArgs
+  vehicles?: boolean | OrganizationCountOutputTypeCountVehiclesArgs
+  assignments?: boolean | OrganizationCountOutputTypeCountAssignmentsArgs
 }
 
 /**
@@ -2518,29 +2518,8 @@ export type OrganizationCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types
 /**
  * OrganizationCountOutputType without action
  */
-export type OrganizationCountOutputTypeCountMembersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.MemberWhereInput
-}
-
-/**
- * OrganizationCountOutputType without action
- */
-export type OrganizationCountOutputTypeCountInvitationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.InvitationWhereInput
-}
-
-/**
- * OrganizationCountOutputType without action
- */
 export type OrganizationCountOutputTypeCountAuditLogsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.AuditLogWhereInput
-}
-
-/**
- * OrganizationCountOutputType without action
- */
-export type OrganizationCountOutputTypeCountVehiclesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.VehicleWhereInput
 }
 
 /**
@@ -2553,43 +2532,22 @@ export type OrganizationCountOutputTypeCountDriversArgs<ExtArgs extends runtime.
 /**
  * OrganizationCountOutputType without action
  */
-export type OrganizationCountOutputTypeCountAssignmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.VehicleAssignmentWhereInput
-}
-
-/**
- * OrganizationCountOutputType without action
- */
-export type OrganizationCountOutputTypeCountShipmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.ShipmentWhereInput
-}
-
-/**
- * OrganizationCountOutputType without action
- */
-export type OrganizationCountOutputTypeCountShipmentEventsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.ShipmentEventWhereInput
-}
-
-/**
- * OrganizationCountOutputType without action
- */
-export type OrganizationCountOutputTypeCountRoutesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.RouteWhereInput
-}
-
-/**
- * OrganizationCountOutputType without action
- */
-export type OrganizationCountOutputTypeCountTrackingArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.TrackingPointWhereInput
-}
-
-/**
- * OrganizationCountOutputType without action
- */
 export type OrganizationCountOutputTypeCountEtaPredictionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.EtaPredictionWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountInvitationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.InvitationWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountMembersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.MemberWhereInput
 }
 
 /**
@@ -2613,6 +2571,48 @@ export type OrganizationCountOutputTypeCountProofsArgs<ExtArgs extends runtime.T
   where?: Prisma.ProofOfDeliveryWhereInput
 }
 
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountRoutesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.RouteWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountShipmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.ShipmentWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountShipmentEventsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.ShipmentEventWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountTrackingArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.TrackingPointWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountVehiclesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.VehicleWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountAssignmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.VehicleAssignmentWhereInput
+}
+
 
 export type OrganizationSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -2626,20 +2626,20 @@ export type OrganizationSelect<ExtArgs extends runtime.Types.Extensions.Internal
   currency?: boolean
   timezone?: boolean
   industry?: boolean
-  members?: boolean | Prisma.Organization$membersArgs<ExtArgs>
-  invitations?: boolean | Prisma.Organization$invitationsArgs<ExtArgs>
   auditLogs?: boolean | Prisma.Organization$auditLogsArgs<ExtArgs>
-  vehicles?: boolean | Prisma.Organization$vehiclesArgs<ExtArgs>
   drivers?: boolean | Prisma.Organization$driversArgs<ExtArgs>
-  assignments?: boolean | Prisma.Organization$assignmentsArgs<ExtArgs>
-  shipments?: boolean | Prisma.Organization$shipmentsArgs<ExtArgs>
-  shipmentEvents?: boolean | Prisma.Organization$shipmentEventsArgs<ExtArgs>
-  routes?: boolean | Prisma.Organization$routesArgs<ExtArgs>
-  tracking?: boolean | Prisma.Organization$trackingArgs<ExtArgs>
   etaPredictions?: boolean | Prisma.Organization$etaPredictionsArgs<ExtArgs>
+  invitations?: boolean | Prisma.Organization$invitationsArgs<ExtArgs>
+  members?: boolean | Prisma.Organization$membersArgs<ExtArgs>
   notifications?: boolean | Prisma.Organization$notificationsArgs<ExtArgs>
   notificationPrefs?: boolean | Prisma.Organization$notificationPrefsArgs<ExtArgs>
   proofs?: boolean | Prisma.Organization$proofsArgs<ExtArgs>
+  routes?: boolean | Prisma.Organization$routesArgs<ExtArgs>
+  shipments?: boolean | Prisma.Organization$shipmentsArgs<ExtArgs>
+  shipmentEvents?: boolean | Prisma.Organization$shipmentEventsArgs<ExtArgs>
+  tracking?: boolean | Prisma.Organization$trackingArgs<ExtArgs>
+  vehicles?: boolean | Prisma.Organization$vehiclesArgs<ExtArgs>
+  assignments?: boolean | Prisma.Organization$assignmentsArgs<ExtArgs>
   _count?: boolean | Prisma.OrganizationCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["organization"]>
 
@@ -2687,20 +2687,20 @@ export type OrganizationSelectScalar = {
 
 export type OrganizationOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "slug" | "logo" | "metadata" | "createdAt" | "updatedAt" | "country" | "currency" | "timezone" | "industry", ExtArgs["result"]["organization"]>
 export type OrganizationInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  members?: boolean | Prisma.Organization$membersArgs<ExtArgs>
-  invitations?: boolean | Prisma.Organization$invitationsArgs<ExtArgs>
   auditLogs?: boolean | Prisma.Organization$auditLogsArgs<ExtArgs>
-  vehicles?: boolean | Prisma.Organization$vehiclesArgs<ExtArgs>
   drivers?: boolean | Prisma.Organization$driversArgs<ExtArgs>
-  assignments?: boolean | Prisma.Organization$assignmentsArgs<ExtArgs>
-  shipments?: boolean | Prisma.Organization$shipmentsArgs<ExtArgs>
-  shipmentEvents?: boolean | Prisma.Organization$shipmentEventsArgs<ExtArgs>
-  routes?: boolean | Prisma.Organization$routesArgs<ExtArgs>
-  tracking?: boolean | Prisma.Organization$trackingArgs<ExtArgs>
   etaPredictions?: boolean | Prisma.Organization$etaPredictionsArgs<ExtArgs>
+  invitations?: boolean | Prisma.Organization$invitationsArgs<ExtArgs>
+  members?: boolean | Prisma.Organization$membersArgs<ExtArgs>
   notifications?: boolean | Prisma.Organization$notificationsArgs<ExtArgs>
   notificationPrefs?: boolean | Prisma.Organization$notificationPrefsArgs<ExtArgs>
   proofs?: boolean | Prisma.Organization$proofsArgs<ExtArgs>
+  routes?: boolean | Prisma.Organization$routesArgs<ExtArgs>
+  shipments?: boolean | Prisma.Organization$shipmentsArgs<ExtArgs>
+  shipmentEvents?: boolean | Prisma.Organization$shipmentEventsArgs<ExtArgs>
+  tracking?: boolean | Prisma.Organization$trackingArgs<ExtArgs>
+  vehicles?: boolean | Prisma.Organization$vehiclesArgs<ExtArgs>
+  assignments?: boolean | Prisma.Organization$assignmentsArgs<ExtArgs>
   _count?: boolean | Prisma.OrganizationCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type OrganizationIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
@@ -2709,20 +2709,20 @@ export type OrganizationIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types
 export type $OrganizationPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Organization"
   objects: {
-    members: Prisma.$MemberPayload<ExtArgs>[]
-    invitations: Prisma.$InvitationPayload<ExtArgs>[]
     auditLogs: Prisma.$AuditLogPayload<ExtArgs>[]
-    vehicles: Prisma.$VehiclePayload<ExtArgs>[]
     drivers: Prisma.$DriverPayload<ExtArgs>[]
-    assignments: Prisma.$VehicleAssignmentPayload<ExtArgs>[]
-    shipments: Prisma.$ShipmentPayload<ExtArgs>[]
-    shipmentEvents: Prisma.$ShipmentEventPayload<ExtArgs>[]
-    routes: Prisma.$RoutePayload<ExtArgs>[]
-    tracking: Prisma.$TrackingPointPayload<ExtArgs>[]
     etaPredictions: Prisma.$EtaPredictionPayload<ExtArgs>[]
+    invitations: Prisma.$InvitationPayload<ExtArgs>[]
+    members: Prisma.$MemberPayload<ExtArgs>[]
     notifications: Prisma.$NotificationPayload<ExtArgs>[]
     notificationPrefs: Prisma.$NotificationPreferencePayload<ExtArgs>[]
     proofs: Prisma.$ProofOfDeliveryPayload<ExtArgs>[]
+    routes: Prisma.$RoutePayload<ExtArgs>[]
+    shipments: Prisma.$ShipmentPayload<ExtArgs>[]
+    shipmentEvents: Prisma.$ShipmentEventPayload<ExtArgs>[]
+    tracking: Prisma.$TrackingPointPayload<ExtArgs>[]
+    vehicles: Prisma.$VehiclePayload<ExtArgs>[]
+    assignments: Prisma.$VehicleAssignmentPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -3130,20 +3130,20 @@ readonly fields: OrganizationFieldRefs;
  */
 export interface Prisma__OrganizationClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  members<T extends Prisma.Organization$membersArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$membersArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$MemberPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  invitations<T extends Prisma.Organization$invitationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$invitationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$InvitationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   auditLogs<T extends Prisma.Organization$auditLogsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$auditLogsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AuditLogPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  vehicles<T extends Prisma.Organization$vehiclesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$vehiclesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VehiclePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   drivers<T extends Prisma.Organization$driversArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$driversArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$DriverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  assignments<T extends Prisma.Organization$assignmentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$assignmentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VehicleAssignmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  shipments<T extends Prisma.Organization$shipmentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$shipmentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ShipmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  shipmentEvents<T extends Prisma.Organization$shipmentEventsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$shipmentEventsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ShipmentEventPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  routes<T extends Prisma.Organization$routesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$routesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$RoutePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  tracking<T extends Prisma.Organization$trackingArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$trackingArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$TrackingPointPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   etaPredictions<T extends Prisma.Organization$etaPredictionsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$etaPredictionsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$EtaPredictionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  invitations<T extends Prisma.Organization$invitationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$invitationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$InvitationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  members<T extends Prisma.Organization$membersArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$membersArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$MemberPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   notifications<T extends Prisma.Organization$notificationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$notificationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$NotificationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   notificationPrefs<T extends Prisma.Organization$notificationPrefsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$notificationPrefsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$NotificationPreferencePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   proofs<T extends Prisma.Organization$proofsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$proofsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ProofOfDeliveryPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  routes<T extends Prisma.Organization$routesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$routesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$RoutePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  shipments<T extends Prisma.Organization$shipmentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$shipmentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ShipmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  shipmentEvents<T extends Prisma.Organization$shipmentEventsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$shipmentEventsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ShipmentEventPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  tracking<T extends Prisma.Organization$trackingArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$trackingArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$TrackingPointPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  vehicles<T extends Prisma.Organization$vehiclesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$vehiclesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VehiclePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  assignments<T extends Prisma.Organization$assignmentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$assignmentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VehicleAssignmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -3577,54 +3577,6 @@ export type OrganizationDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.
 }
 
 /**
- * Organization.members
- */
-export type Organization$membersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the Member
-   */
-  select?: Prisma.MemberSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the Member
-   */
-  omit?: Prisma.MemberOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.MemberInclude<ExtArgs> | null
-  where?: Prisma.MemberWhereInput
-  orderBy?: Prisma.MemberOrderByWithRelationInput | Prisma.MemberOrderByWithRelationInput[]
-  cursor?: Prisma.MemberWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.MemberScalarFieldEnum | Prisma.MemberScalarFieldEnum[]
-}
-
-/**
- * Organization.invitations
- */
-export type Organization$invitationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the Invitation
-   */
-  select?: Prisma.InvitationSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the Invitation
-   */
-  omit?: Prisma.InvitationOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.InvitationInclude<ExtArgs> | null
-  where?: Prisma.InvitationWhereInput
-  orderBy?: Prisma.InvitationOrderByWithRelationInput | Prisma.InvitationOrderByWithRelationInput[]
-  cursor?: Prisma.InvitationWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.InvitationScalarFieldEnum | Prisma.InvitationScalarFieldEnum[]
-}
-
-/**
  * Organization.auditLogs
  */
 export type Organization$auditLogsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -3646,30 +3598,6 @@ export type Organization$auditLogsArgs<ExtArgs extends runtime.Types.Extensions.
   take?: number
   skip?: number
   distinct?: Prisma.AuditLogScalarFieldEnum | Prisma.AuditLogScalarFieldEnum[]
-}
-
-/**
- * Organization.vehicles
- */
-export type Organization$vehiclesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the Vehicle
-   */
-  select?: Prisma.VehicleSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the Vehicle
-   */
-  omit?: Prisma.VehicleOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.VehicleInclude<ExtArgs> | null
-  where?: Prisma.VehicleWhereInput
-  orderBy?: Prisma.VehicleOrderByWithRelationInput | Prisma.VehicleOrderByWithRelationInput[]
-  cursor?: Prisma.VehicleWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.VehicleScalarFieldEnum | Prisma.VehicleScalarFieldEnum[]
 }
 
 /**
@@ -3697,126 +3625,6 @@ export type Organization$driversArgs<ExtArgs extends runtime.Types.Extensions.In
 }
 
 /**
- * Organization.assignments
- */
-export type Organization$assignmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the VehicleAssignment
-   */
-  select?: Prisma.VehicleAssignmentSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the VehicleAssignment
-   */
-  omit?: Prisma.VehicleAssignmentOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.VehicleAssignmentInclude<ExtArgs> | null
-  where?: Prisma.VehicleAssignmentWhereInput
-  orderBy?: Prisma.VehicleAssignmentOrderByWithRelationInput | Prisma.VehicleAssignmentOrderByWithRelationInput[]
-  cursor?: Prisma.VehicleAssignmentWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.VehicleAssignmentScalarFieldEnum | Prisma.VehicleAssignmentScalarFieldEnum[]
-}
-
-/**
- * Organization.shipments
- */
-export type Organization$shipmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the Shipment
-   */
-  select?: Prisma.ShipmentSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the Shipment
-   */
-  omit?: Prisma.ShipmentOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.ShipmentInclude<ExtArgs> | null
-  where?: Prisma.ShipmentWhereInput
-  orderBy?: Prisma.ShipmentOrderByWithRelationInput | Prisma.ShipmentOrderByWithRelationInput[]
-  cursor?: Prisma.ShipmentWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.ShipmentScalarFieldEnum | Prisma.ShipmentScalarFieldEnum[]
-}
-
-/**
- * Organization.shipmentEvents
- */
-export type Organization$shipmentEventsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the ShipmentEvent
-   */
-  select?: Prisma.ShipmentEventSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the ShipmentEvent
-   */
-  omit?: Prisma.ShipmentEventOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.ShipmentEventInclude<ExtArgs> | null
-  where?: Prisma.ShipmentEventWhereInput
-  orderBy?: Prisma.ShipmentEventOrderByWithRelationInput | Prisma.ShipmentEventOrderByWithRelationInput[]
-  cursor?: Prisma.ShipmentEventWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.ShipmentEventScalarFieldEnum | Prisma.ShipmentEventScalarFieldEnum[]
-}
-
-/**
- * Organization.routes
- */
-export type Organization$routesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the Route
-   */
-  select?: Prisma.RouteSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the Route
-   */
-  omit?: Prisma.RouteOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.RouteInclude<ExtArgs> | null
-  where?: Prisma.RouteWhereInput
-  orderBy?: Prisma.RouteOrderByWithRelationInput | Prisma.RouteOrderByWithRelationInput[]
-  cursor?: Prisma.RouteWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.RouteScalarFieldEnum | Prisma.RouteScalarFieldEnum[]
-}
-
-/**
- * Organization.tracking
- */
-export type Organization$trackingArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the TrackingPoint
-   */
-  select?: Prisma.TrackingPointSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the TrackingPoint
-   */
-  omit?: Prisma.TrackingPointOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.TrackingPointInclude<ExtArgs> | null
-  where?: Prisma.TrackingPointWhereInput
-  orderBy?: Prisma.TrackingPointOrderByWithRelationInput | Prisma.TrackingPointOrderByWithRelationInput[]
-  cursor?: Prisma.TrackingPointWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.TrackingPointScalarFieldEnum | Prisma.TrackingPointScalarFieldEnum[]
-}
-
-/**
  * Organization.etaPredictions
  */
 export type Organization$etaPredictionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -3838,6 +3646,54 @@ export type Organization$etaPredictionsArgs<ExtArgs extends runtime.Types.Extens
   take?: number
   skip?: number
   distinct?: Prisma.EtaPredictionScalarFieldEnum | Prisma.EtaPredictionScalarFieldEnum[]
+}
+
+/**
+ * Organization.invitations
+ */
+export type Organization$invitationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Invitation
+   */
+  select?: Prisma.InvitationSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Invitation
+   */
+  omit?: Prisma.InvitationOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.InvitationInclude<ExtArgs> | null
+  where?: Prisma.InvitationWhereInput
+  orderBy?: Prisma.InvitationOrderByWithRelationInput | Prisma.InvitationOrderByWithRelationInput[]
+  cursor?: Prisma.InvitationWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.InvitationScalarFieldEnum | Prisma.InvitationScalarFieldEnum[]
+}
+
+/**
+ * Organization.members
+ */
+export type Organization$membersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Member
+   */
+  select?: Prisma.MemberSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Member
+   */
+  omit?: Prisma.MemberOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.MemberInclude<ExtArgs> | null
+  where?: Prisma.MemberWhereInput
+  orderBy?: Prisma.MemberOrderByWithRelationInput | Prisma.MemberOrderByWithRelationInput[]
+  cursor?: Prisma.MemberWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.MemberScalarFieldEnum | Prisma.MemberScalarFieldEnum[]
 }
 
 /**
@@ -3910,6 +3766,150 @@ export type Organization$proofsArgs<ExtArgs extends runtime.Types.Extensions.Int
   take?: number
   skip?: number
   distinct?: Prisma.ProofOfDeliveryScalarFieldEnum | Prisma.ProofOfDeliveryScalarFieldEnum[]
+}
+
+/**
+ * Organization.routes
+ */
+export type Organization$routesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Route
+   */
+  select?: Prisma.RouteSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Route
+   */
+  omit?: Prisma.RouteOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.RouteInclude<ExtArgs> | null
+  where?: Prisma.RouteWhereInput
+  orderBy?: Prisma.RouteOrderByWithRelationInput | Prisma.RouteOrderByWithRelationInput[]
+  cursor?: Prisma.RouteWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.RouteScalarFieldEnum | Prisma.RouteScalarFieldEnum[]
+}
+
+/**
+ * Organization.shipments
+ */
+export type Organization$shipmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Shipment
+   */
+  select?: Prisma.ShipmentSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Shipment
+   */
+  omit?: Prisma.ShipmentOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.ShipmentInclude<ExtArgs> | null
+  where?: Prisma.ShipmentWhereInput
+  orderBy?: Prisma.ShipmentOrderByWithRelationInput | Prisma.ShipmentOrderByWithRelationInput[]
+  cursor?: Prisma.ShipmentWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.ShipmentScalarFieldEnum | Prisma.ShipmentScalarFieldEnum[]
+}
+
+/**
+ * Organization.shipmentEvents
+ */
+export type Organization$shipmentEventsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the ShipmentEvent
+   */
+  select?: Prisma.ShipmentEventSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the ShipmentEvent
+   */
+  omit?: Prisma.ShipmentEventOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.ShipmentEventInclude<ExtArgs> | null
+  where?: Prisma.ShipmentEventWhereInput
+  orderBy?: Prisma.ShipmentEventOrderByWithRelationInput | Prisma.ShipmentEventOrderByWithRelationInput[]
+  cursor?: Prisma.ShipmentEventWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.ShipmentEventScalarFieldEnum | Prisma.ShipmentEventScalarFieldEnum[]
+}
+
+/**
+ * Organization.tracking
+ */
+export type Organization$trackingArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the TrackingPoint
+   */
+  select?: Prisma.TrackingPointSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the TrackingPoint
+   */
+  omit?: Prisma.TrackingPointOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.TrackingPointInclude<ExtArgs> | null
+  where?: Prisma.TrackingPointWhereInput
+  orderBy?: Prisma.TrackingPointOrderByWithRelationInput | Prisma.TrackingPointOrderByWithRelationInput[]
+  cursor?: Prisma.TrackingPointWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.TrackingPointScalarFieldEnum | Prisma.TrackingPointScalarFieldEnum[]
+}
+
+/**
+ * Organization.vehicles
+ */
+export type Organization$vehiclesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Vehicle
+   */
+  select?: Prisma.VehicleSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Vehicle
+   */
+  omit?: Prisma.VehicleOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.VehicleInclude<ExtArgs> | null
+  where?: Prisma.VehicleWhereInput
+  orderBy?: Prisma.VehicleOrderByWithRelationInput | Prisma.VehicleOrderByWithRelationInput[]
+  cursor?: Prisma.VehicleWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.VehicleScalarFieldEnum | Prisma.VehicleScalarFieldEnum[]
+}
+
+/**
+ * Organization.assignments
+ */
+export type Organization$assignmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the VehicleAssignment
+   */
+  select?: Prisma.VehicleAssignmentSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the VehicleAssignment
+   */
+  omit?: Prisma.VehicleAssignmentOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.VehicleAssignmentInclude<ExtArgs> | null
+  where?: Prisma.VehicleAssignmentWhereInput
+  orderBy?: Prisma.VehicleAssignmentOrderByWithRelationInput | Prisma.VehicleAssignmentOrderByWithRelationInput[]
+  cursor?: Prisma.VehicleAssignmentWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.VehicleAssignmentScalarFieldEnum | Prisma.VehicleAssignmentScalarFieldEnum[]
 }
 
 /**

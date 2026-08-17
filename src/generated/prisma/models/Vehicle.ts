@@ -332,10 +332,10 @@ export type VehicleWhereInput = {
   notes?: Prisma.StringNullableFilter<"Vehicle"> | string | null
   createdAt?: Prisma.DateTimeFilter<"Vehicle"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Vehicle"> | Date | string
+  etaPredictions?: Prisma.EtaPredictionListRelationFilter
+  tracking?: Prisma.TrackingPointListRelationFilter
   organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
   assignments?: Prisma.VehicleAssignmentListRelationFilter
-  tracking?: Prisma.TrackingPointListRelationFilter
-  etaPredictions?: Prisma.EtaPredictionListRelationFilter
 }
 
 export type VehicleOrderByWithRelationInput = {
@@ -358,10 +358,10 @@ export type VehicleOrderByWithRelationInput = {
   notes?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
+  etaPredictions?: Prisma.EtaPredictionOrderByRelationAggregateInput
+  tracking?: Prisma.TrackingPointOrderByRelationAggregateInput
   organization?: Prisma.OrganizationOrderByWithRelationInput
   assignments?: Prisma.VehicleAssignmentOrderByRelationAggregateInput
-  tracking?: Prisma.TrackingPointOrderByRelationAggregateInput
-  etaPredictions?: Prisma.EtaPredictionOrderByRelationAggregateInput
 }
 
 export type VehicleWhereUniqueInput = Prisma.AtLeast<{
@@ -388,10 +388,10 @@ export type VehicleWhereUniqueInput = Prisma.AtLeast<{
   notes?: Prisma.StringNullableFilter<"Vehicle"> | string | null
   createdAt?: Prisma.DateTimeFilter<"Vehicle"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Vehicle"> | Date | string
+  etaPredictions?: Prisma.EtaPredictionListRelationFilter
+  tracking?: Prisma.TrackingPointListRelationFilter
   organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
   assignments?: Prisma.VehicleAssignmentListRelationFilter
-  tracking?: Prisma.TrackingPointListRelationFilter
-  etaPredictions?: Prisma.EtaPredictionListRelationFilter
 }, "id" | "organizationId_plateNumber">
 
 export type VehicleOrderByWithAggregationInput = {
@@ -465,10 +465,10 @@ export type VehicleCreateInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
+  etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutVehicleInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutVehicleInput
   organization: Prisma.OrganizationCreateNestedOneWithoutVehiclesInput
   assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutVehicleInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutVehicleInput
-  etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutVehicleInput
 }
 
 export type VehicleUncheckedCreateInput = {
@@ -491,9 +491,9 @@ export type VehicleUncheckedCreateInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutVehicleInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutVehicleInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutVehicleInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutVehicleInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutVehicleInput
 }
 
 export type VehicleUpdateInput = {
@@ -515,10 +515,10 @@ export type VehicleUpdateInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutVehicleNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutVehicleNestedInput
   organization?: Prisma.OrganizationUpdateOneRequiredWithoutVehiclesNestedInput
   assignments?: Prisma.VehicleAssignmentUpdateManyWithoutVehicleNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutVehicleNestedInput
-  etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutVehicleNestedInput
 }
 
 export type VehicleUncheckedUpdateInput = {
@@ -541,9 +541,9 @@ export type VehicleUncheckedUpdateInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutVehicleNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutVehicleNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutVehicleNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutVehicleNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutVehicleNestedInput
 }
 
 export type VehicleCreateManyInput = {
@@ -833,9 +833,9 @@ export type VehicleCreateWithoutOrganizationInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutVehicleInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutVehicleInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutVehicleInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutVehicleInput
+  assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutVehicleInput
 }
 
 export type VehicleUncheckedCreateWithoutOrganizationInput = {
@@ -857,9 +857,9 @@ export type VehicleUncheckedCreateWithoutOrganizationInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutVehicleInput
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutVehicleInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutVehicleInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutVehicleInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutVehicleInput
 }
 
 export type VehicleCreateOrConnectWithoutOrganizationInput = {
@@ -932,9 +932,9 @@ export type VehicleCreateWithoutAssignmentsInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  organization: Prisma.OrganizationCreateNestedOneWithoutVehiclesInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutVehicleInput
   etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutVehicleInput
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutVehicleInput
+  organization: Prisma.OrganizationCreateNestedOneWithoutVehiclesInput
 }
 
 export type VehicleUncheckedCreateWithoutAssignmentsInput = {
@@ -957,8 +957,8 @@ export type VehicleUncheckedCreateWithoutAssignmentsInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutVehicleInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutVehicleInput
+  tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutVehicleInput
 }
 
 export type VehicleCreateOrConnectWithoutAssignmentsInput = {
@@ -996,9 +996,9 @@ export type VehicleUpdateWithoutAssignmentsInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  organization?: Prisma.OrganizationUpdateOneRequiredWithoutVehiclesNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutVehicleNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutVehicleNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutVehicleNestedInput
+  organization?: Prisma.OrganizationUpdateOneRequiredWithoutVehiclesNestedInput
 }
 
 export type VehicleUncheckedUpdateWithoutAssignmentsInput = {
@@ -1021,8 +1021,8 @@ export type VehicleUncheckedUpdateWithoutAssignmentsInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutVehicleNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutVehicleNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutVehicleNestedInput
 }
 
 export type VehicleCreateWithoutTrackingInput = {
@@ -1044,9 +1044,9 @@ export type VehicleCreateWithoutTrackingInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
+  etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutVehicleInput
   organization: Prisma.OrganizationCreateNestedOneWithoutVehiclesInput
   assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutVehicleInput
-  etaPredictions?: Prisma.EtaPredictionCreateNestedManyWithoutVehicleInput
 }
 
 export type VehicleUncheckedCreateWithoutTrackingInput = {
@@ -1069,8 +1069,8 @@ export type VehicleUncheckedCreateWithoutTrackingInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutVehicleInput
   etaPredictions?: Prisma.EtaPredictionUncheckedCreateNestedManyWithoutVehicleInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutVehicleInput
 }
 
 export type VehicleCreateOrConnectWithoutTrackingInput = {
@@ -1108,9 +1108,9 @@ export type VehicleUpdateWithoutTrackingInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutVehicleNestedInput
   organization?: Prisma.OrganizationUpdateOneRequiredWithoutVehiclesNestedInput
   assignments?: Prisma.VehicleAssignmentUpdateManyWithoutVehicleNestedInput
-  etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutVehicleNestedInput
 }
 
 export type VehicleUncheckedUpdateWithoutTrackingInput = {
@@ -1133,8 +1133,8 @@ export type VehicleUncheckedUpdateWithoutTrackingInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutVehicleNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutVehicleNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutVehicleNestedInput
 }
 
 export type VehicleCreateWithoutEtaPredictionsInput = {
@@ -1156,9 +1156,9 @@ export type VehicleCreateWithoutEtaPredictionsInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
+  tracking?: Prisma.TrackingPointCreateNestedManyWithoutVehicleInput
   organization: Prisma.OrganizationCreateNestedOneWithoutVehiclesInput
   assignments?: Prisma.VehicleAssignmentCreateNestedManyWithoutVehicleInput
-  tracking?: Prisma.TrackingPointCreateNestedManyWithoutVehicleInput
 }
 
 export type VehicleUncheckedCreateWithoutEtaPredictionsInput = {
@@ -1181,8 +1181,8 @@ export type VehicleUncheckedCreateWithoutEtaPredictionsInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutVehicleInput
   tracking?: Prisma.TrackingPointUncheckedCreateNestedManyWithoutVehicleInput
+  assignments?: Prisma.VehicleAssignmentUncheckedCreateNestedManyWithoutVehicleInput
 }
 
 export type VehicleCreateOrConnectWithoutEtaPredictionsInput = {
@@ -1220,9 +1220,9 @@ export type VehicleUpdateWithoutEtaPredictionsInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tracking?: Prisma.TrackingPointUpdateManyWithoutVehicleNestedInput
   organization?: Prisma.OrganizationUpdateOneRequiredWithoutVehiclesNestedInput
   assignments?: Prisma.VehicleAssignmentUpdateManyWithoutVehicleNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutVehicleNestedInput
 }
 
 export type VehicleUncheckedUpdateWithoutEtaPredictionsInput = {
@@ -1245,8 +1245,8 @@ export type VehicleUncheckedUpdateWithoutEtaPredictionsInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutVehicleNestedInput
   tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutVehicleNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutVehicleNestedInput
 }
 
 export type VehicleCreateManyOrganizationInput = {
@@ -1289,9 +1289,9 @@ export type VehicleUpdateWithoutOrganizationInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutVehicleNestedInput
-  tracking?: Prisma.TrackingPointUpdateManyWithoutVehicleNestedInput
   etaPredictions?: Prisma.EtaPredictionUpdateManyWithoutVehicleNestedInput
+  tracking?: Prisma.TrackingPointUpdateManyWithoutVehicleNestedInput
+  assignments?: Prisma.VehicleAssignmentUpdateManyWithoutVehicleNestedInput
 }
 
 export type VehicleUncheckedUpdateWithoutOrganizationInput = {
@@ -1313,9 +1313,9 @@ export type VehicleUncheckedUpdateWithoutOrganizationInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutVehicleNestedInput
-  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutVehicleNestedInput
   etaPredictions?: Prisma.EtaPredictionUncheckedUpdateManyWithoutVehicleNestedInput
+  tracking?: Prisma.TrackingPointUncheckedUpdateManyWithoutVehicleNestedInput
+  assignments?: Prisma.VehicleAssignmentUncheckedUpdateManyWithoutVehicleNestedInput
 }
 
 export type VehicleUncheckedUpdateManyWithoutOrganizationInput = {
@@ -1345,15 +1345,15 @@ export type VehicleUncheckedUpdateManyWithoutOrganizationInput = {
  */
 
 export type VehicleCountOutputType = {
-  assignments: number
-  tracking: number
   etaPredictions: number
+  tracking: number
+  assignments: number
 }
 
 export type VehicleCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  assignments?: boolean | VehicleCountOutputTypeCountAssignmentsArgs
-  tracking?: boolean | VehicleCountOutputTypeCountTrackingArgs
   etaPredictions?: boolean | VehicleCountOutputTypeCountEtaPredictionsArgs
+  tracking?: boolean | VehicleCountOutputTypeCountTrackingArgs
+  assignments?: boolean | VehicleCountOutputTypeCountAssignmentsArgs
 }
 
 /**
@@ -1369,8 +1369,8 @@ export type VehicleCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Exte
 /**
  * VehicleCountOutputType without action
  */
-export type VehicleCountOutputTypeCountAssignmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.VehicleAssignmentWhereInput
+export type VehicleCountOutputTypeCountEtaPredictionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.EtaPredictionWhereInput
 }
 
 /**
@@ -1383,8 +1383,8 @@ export type VehicleCountOutputTypeCountTrackingArgs<ExtArgs extends runtime.Type
 /**
  * VehicleCountOutputType without action
  */
-export type VehicleCountOutputTypeCountEtaPredictionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.EtaPredictionWhereInput
+export type VehicleCountOutputTypeCountAssignmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.VehicleAssignmentWhereInput
 }
 
 
@@ -1408,10 +1408,10 @@ export type VehicleSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   notes?: boolean
   createdAt?: boolean
   updatedAt?: boolean
+  etaPredictions?: boolean | Prisma.Vehicle$etaPredictionsArgs<ExtArgs>
+  tracking?: boolean | Prisma.Vehicle$trackingArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   assignments?: boolean | Prisma.Vehicle$assignmentsArgs<ExtArgs>
-  tracking?: boolean | Prisma.Vehicle$trackingArgs<ExtArgs>
-  etaPredictions?: boolean | Prisma.Vehicle$etaPredictionsArgs<ExtArgs>
   _count?: boolean | Prisma.VehicleCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["vehicle"]>
 
@@ -1485,10 +1485,10 @@ export type VehicleSelectScalar = {
 
 export type VehicleOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "organizationId" | "plateNumber" | "make" | "model" | "year" | "type" | "status" | "color" | "vin" | "fuelType" | "fuelCapacity" | "insuranceCompany" | "insuranceExpiry" | "lastServiceAt" | "nextServiceAt" | "notes" | "createdAt" | "updatedAt", ExtArgs["result"]["vehicle"]>
 export type VehicleInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  etaPredictions?: boolean | Prisma.Vehicle$etaPredictionsArgs<ExtArgs>
+  tracking?: boolean | Prisma.Vehicle$trackingArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   assignments?: boolean | Prisma.Vehicle$assignmentsArgs<ExtArgs>
-  tracking?: boolean | Prisma.Vehicle$trackingArgs<ExtArgs>
-  etaPredictions?: boolean | Prisma.Vehicle$etaPredictionsArgs<ExtArgs>
   _count?: boolean | Prisma.VehicleCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type VehicleIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -1501,10 +1501,10 @@ export type VehicleIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Exte
 export type $VehiclePayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Vehicle"
   objects: {
+    etaPredictions: Prisma.$EtaPredictionPayload<ExtArgs>[]
+    tracking: Prisma.$TrackingPointPayload<ExtArgs>[]
     organization: Prisma.$OrganizationPayload<ExtArgs>
     assignments: Prisma.$VehicleAssignmentPayload<ExtArgs>[]
-    tracking: Prisma.$TrackingPointPayload<ExtArgs>[]
-    etaPredictions: Prisma.$EtaPredictionPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1920,10 +1920,10 @@ readonly fields: VehicleFieldRefs;
  */
 export interface Prisma__VehicleClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
+  etaPredictions<T extends Prisma.Vehicle$etaPredictionsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Vehicle$etaPredictionsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$EtaPredictionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  tracking<T extends Prisma.Vehicle$trackingArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Vehicle$trackingArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$TrackingPointPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   organization<T extends Prisma.OrganizationDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.OrganizationDefaultArgs<ExtArgs>>): Prisma.Prisma__OrganizationClient<runtime.Types.Result.GetResult<Prisma.$OrganizationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   assignments<T extends Prisma.Vehicle$assignmentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Vehicle$assignmentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VehicleAssignmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  tracking<T extends Prisma.Vehicle$trackingArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Vehicle$trackingArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$TrackingPointPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  etaPredictions<T extends Prisma.Vehicle$etaPredictionsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Vehicle$etaPredictionsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$EtaPredictionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2373,27 +2373,27 @@ export type VehicleDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Inter
 }
 
 /**
- * Vehicle.assignments
+ * Vehicle.etaPredictions
  */
-export type Vehicle$assignmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Vehicle$etaPredictionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the VehicleAssignment
+   * Select specific fields to fetch from the EtaPrediction
    */
-  select?: Prisma.VehicleAssignmentSelect<ExtArgs> | null
+  select?: Prisma.EtaPredictionSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the VehicleAssignment
+   * Omit specific fields from the EtaPrediction
    */
-  omit?: Prisma.VehicleAssignmentOmit<ExtArgs> | null
+  omit?: Prisma.EtaPredictionOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.VehicleAssignmentInclude<ExtArgs> | null
-  where?: Prisma.VehicleAssignmentWhereInput
-  orderBy?: Prisma.VehicleAssignmentOrderByWithRelationInput | Prisma.VehicleAssignmentOrderByWithRelationInput[]
-  cursor?: Prisma.VehicleAssignmentWhereUniqueInput
+  include?: Prisma.EtaPredictionInclude<ExtArgs> | null
+  where?: Prisma.EtaPredictionWhereInput
+  orderBy?: Prisma.EtaPredictionOrderByWithRelationInput | Prisma.EtaPredictionOrderByWithRelationInput[]
+  cursor?: Prisma.EtaPredictionWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.VehicleAssignmentScalarFieldEnum | Prisma.VehicleAssignmentScalarFieldEnum[]
+  distinct?: Prisma.EtaPredictionScalarFieldEnum | Prisma.EtaPredictionScalarFieldEnum[]
 }
 
 /**
@@ -2421,27 +2421,27 @@ export type Vehicle$trackingArgs<ExtArgs extends runtime.Types.Extensions.Intern
 }
 
 /**
- * Vehicle.etaPredictions
+ * Vehicle.assignments
  */
-export type Vehicle$etaPredictionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Vehicle$assignmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the EtaPrediction
+   * Select specific fields to fetch from the VehicleAssignment
    */
-  select?: Prisma.EtaPredictionSelect<ExtArgs> | null
+  select?: Prisma.VehicleAssignmentSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the EtaPrediction
+   * Omit specific fields from the VehicleAssignment
    */
-  omit?: Prisma.EtaPredictionOmit<ExtArgs> | null
+  omit?: Prisma.VehicleAssignmentOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.EtaPredictionInclude<ExtArgs> | null
-  where?: Prisma.EtaPredictionWhereInput
-  orderBy?: Prisma.EtaPredictionOrderByWithRelationInput | Prisma.EtaPredictionOrderByWithRelationInput[]
-  cursor?: Prisma.EtaPredictionWhereUniqueInput
+  include?: Prisma.VehicleAssignmentInclude<ExtArgs> | null
+  where?: Prisma.VehicleAssignmentWhereInput
+  orderBy?: Prisma.VehicleAssignmentOrderByWithRelationInput | Prisma.VehicleAssignmentOrderByWithRelationInput[]
+  cursor?: Prisma.VehicleAssignmentWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.EtaPredictionScalarFieldEnum | Prisma.EtaPredictionScalarFieldEnum[]
+  distinct?: Prisma.VehicleAssignmentScalarFieldEnum | Prisma.VehicleAssignmentScalarFieldEnum[]
 }
 
 /**

@@ -240,7 +240,6 @@ export const DriverScalarFieldEnum = {
   licenseClass: 'licenseClass',
   licenseExpiry: 'licenseExpiry',
   status: 'status',
-  pin: 'pin',
   bloodType: 'bloodType',
   emergencyContact: 'emergencyContact',
   nextOfKinName: 'nextOfKinName',
@@ -248,7 +247,8 @@ export const DriverScalarFieldEnum = {
   address: 'address',
   notes: 'notes',
   createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  updatedAt: 'updatedAt',
+  pin: 'pin'
 } as const
 
 export type DriverScalarFieldEnum = (typeof DriverScalarFieldEnum)[keyof typeof DriverScalarFieldEnum]

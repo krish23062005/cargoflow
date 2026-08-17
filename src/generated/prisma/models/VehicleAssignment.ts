@@ -222,10 +222,10 @@ export type VehicleAssignmentWhereInput = {
   notes?: Prisma.StringNullableFilter<"VehicleAssignment"> | string | null
   createdAt?: Prisma.DateTimeFilter<"VehicleAssignment"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"VehicleAssignment"> | Date | string
+  shipments?: Prisma.ShipmentListRelationFilter
+  driver?: Prisma.XOR<Prisma.DriverScalarRelationFilter, Prisma.DriverWhereInput>
   organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
   vehicle?: Prisma.XOR<Prisma.VehicleScalarRelationFilter, Prisma.VehicleWhereInput>
-  driver?: Prisma.XOR<Prisma.DriverScalarRelationFilter, Prisma.DriverWhereInput>
-  shipments?: Prisma.ShipmentListRelationFilter
 }
 
 export type VehicleAssignmentOrderByWithRelationInput = {
@@ -239,10 +239,10 @@ export type VehicleAssignmentOrderByWithRelationInput = {
   notes?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
+  shipments?: Prisma.ShipmentOrderByRelationAggregateInput
+  driver?: Prisma.DriverOrderByWithRelationInput
   organization?: Prisma.OrganizationOrderByWithRelationInput
   vehicle?: Prisma.VehicleOrderByWithRelationInput
-  driver?: Prisma.DriverOrderByWithRelationInput
-  shipments?: Prisma.ShipmentOrderByRelationAggregateInput
 }
 
 export type VehicleAssignmentWhereUniqueInput = Prisma.AtLeast<{
@@ -259,10 +259,10 @@ export type VehicleAssignmentWhereUniqueInput = Prisma.AtLeast<{
   notes?: Prisma.StringNullableFilter<"VehicleAssignment"> | string | null
   createdAt?: Prisma.DateTimeFilter<"VehicleAssignment"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"VehicleAssignment"> | Date | string
+  shipments?: Prisma.ShipmentListRelationFilter
+  driver?: Prisma.XOR<Prisma.DriverScalarRelationFilter, Prisma.DriverWhereInput>
   organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
   vehicle?: Prisma.XOR<Prisma.VehicleScalarRelationFilter, Prisma.VehicleWhereInput>
-  driver?: Prisma.XOR<Prisma.DriverScalarRelationFilter, Prisma.DriverWhereInput>
-  shipments?: Prisma.ShipmentListRelationFilter
 }, "id">
 
 export type VehicleAssignmentOrderByWithAggregationInput = {
@@ -305,10 +305,10 @@ export type VehicleAssignmentCreateInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutAssignmentInput
+  driver: Prisma.DriverCreateNestedOneWithoutAssignmentsInput
   organization: Prisma.OrganizationCreateNestedOneWithoutAssignmentsInput
   vehicle: Prisma.VehicleCreateNestedOneWithoutAssignmentsInput
-  driver: Prisma.DriverCreateNestedOneWithoutAssignmentsInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutAssignmentInput
 }
 
 export type VehicleAssignmentUncheckedCreateInput = {
@@ -333,10 +333,10 @@ export type VehicleAssignmentUpdateInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  shipments?: Prisma.ShipmentUpdateManyWithoutAssignmentNestedInput
+  driver?: Prisma.DriverUpdateOneRequiredWithoutAssignmentsNestedInput
   organization?: Prisma.OrganizationUpdateOneRequiredWithoutAssignmentsNestedInput
   vehicle?: Prisma.VehicleUpdateOneRequiredWithoutAssignmentsNestedInput
-  driver?: Prisma.DriverUpdateOneRequiredWithoutAssignmentsNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutAssignmentNestedInput
 }
 
 export type VehicleAssignmentUncheckedUpdateInput = {
@@ -593,9 +593,9 @@ export type VehicleAssignmentCreateWithoutOrganizationInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  vehicle: Prisma.VehicleCreateNestedOneWithoutAssignmentsInput
-  driver: Prisma.DriverCreateNestedOneWithoutAssignmentsInput
   shipments?: Prisma.ShipmentCreateNestedManyWithoutAssignmentInput
+  driver: Prisma.DriverCreateNestedOneWithoutAssignmentsInput
+  vehicle: Prisma.VehicleCreateNestedOneWithoutAssignmentsInput
 }
 
 export type VehicleAssignmentUncheckedCreateWithoutOrganizationInput = {
@@ -661,9 +661,9 @@ export type VehicleAssignmentCreateWithoutVehicleInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  organization: Prisma.OrganizationCreateNestedOneWithoutAssignmentsInput
-  driver: Prisma.DriverCreateNestedOneWithoutAssignmentsInput
   shipments?: Prisma.ShipmentCreateNestedManyWithoutAssignmentInput
+  driver: Prisma.DriverCreateNestedOneWithoutAssignmentsInput
+  organization: Prisma.OrganizationCreateNestedOneWithoutAssignmentsInput
 }
 
 export type VehicleAssignmentUncheckedCreateWithoutVehicleInput = {
@@ -713,9 +713,9 @@ export type VehicleAssignmentCreateWithoutDriverInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
+  shipments?: Prisma.ShipmentCreateNestedManyWithoutAssignmentInput
   organization: Prisma.OrganizationCreateNestedOneWithoutAssignmentsInput
   vehicle: Prisma.VehicleCreateNestedOneWithoutAssignmentsInput
-  shipments?: Prisma.ShipmentCreateNestedManyWithoutAssignmentInput
 }
 
 export type VehicleAssignmentUncheckedCreateWithoutDriverInput = {
@@ -765,9 +765,9 @@ export type VehicleAssignmentCreateWithoutShipmentsInput = {
   notes?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
+  driver: Prisma.DriverCreateNestedOneWithoutAssignmentsInput
   organization: Prisma.OrganizationCreateNestedOneWithoutAssignmentsInput
   vehicle: Prisma.VehicleCreateNestedOneWithoutAssignmentsInput
-  driver: Prisma.DriverCreateNestedOneWithoutAssignmentsInput
 }
 
 export type VehicleAssignmentUncheckedCreateWithoutShipmentsInput = {
@@ -807,9 +807,9 @@ export type VehicleAssignmentUpdateWithoutShipmentsInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  driver?: Prisma.DriverUpdateOneRequiredWithoutAssignmentsNestedInput
   organization?: Prisma.OrganizationUpdateOneRequiredWithoutAssignmentsNestedInput
   vehicle?: Prisma.VehicleUpdateOneRequiredWithoutAssignmentsNestedInput
-  driver?: Prisma.DriverUpdateOneRequiredWithoutAssignmentsNestedInput
 }
 
 export type VehicleAssignmentUncheckedUpdateWithoutShipmentsInput = {
@@ -845,9 +845,9 @@ export type VehicleAssignmentUpdateWithoutOrganizationInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  vehicle?: Prisma.VehicleUpdateOneRequiredWithoutAssignmentsNestedInput
-  driver?: Prisma.DriverUpdateOneRequiredWithoutAssignmentsNestedInput
   shipments?: Prisma.ShipmentUpdateManyWithoutAssignmentNestedInput
+  driver?: Prisma.DriverUpdateOneRequiredWithoutAssignmentsNestedInput
+  vehicle?: Prisma.VehicleUpdateOneRequiredWithoutAssignmentsNestedInput
 }
 
 export type VehicleAssignmentUncheckedUpdateWithoutOrganizationInput = {
@@ -895,9 +895,9 @@ export type VehicleAssignmentUpdateWithoutVehicleInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  organization?: Prisma.OrganizationUpdateOneRequiredWithoutAssignmentsNestedInput
-  driver?: Prisma.DriverUpdateOneRequiredWithoutAssignmentsNestedInput
   shipments?: Prisma.ShipmentUpdateManyWithoutAssignmentNestedInput
+  driver?: Prisma.DriverUpdateOneRequiredWithoutAssignmentsNestedInput
+  organization?: Prisma.OrganizationUpdateOneRequiredWithoutAssignmentsNestedInput
 }
 
 export type VehicleAssignmentUncheckedUpdateWithoutVehicleInput = {
@@ -945,9 +945,9 @@ export type VehicleAssignmentUpdateWithoutDriverInput = {
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  shipments?: Prisma.ShipmentUpdateManyWithoutAssignmentNestedInput
   organization?: Prisma.OrganizationUpdateOneRequiredWithoutAssignmentsNestedInput
   vehicle?: Prisma.VehicleUpdateOneRequiredWithoutAssignmentsNestedInput
-  shipments?: Prisma.ShipmentUpdateManyWithoutAssignmentNestedInput
 }
 
 export type VehicleAssignmentUncheckedUpdateWithoutDriverInput = {
@@ -1017,10 +1017,10 @@ export type VehicleAssignmentSelect<ExtArgs extends runtime.Types.Extensions.Int
   notes?: boolean
   createdAt?: boolean
   updatedAt?: boolean
+  shipments?: boolean | Prisma.VehicleAssignment$shipmentsArgs<ExtArgs>
+  driver?: boolean | Prisma.DriverDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
-  driver?: boolean | Prisma.DriverDefaultArgs<ExtArgs>
-  shipments?: boolean | Prisma.VehicleAssignment$shipmentsArgs<ExtArgs>
   _count?: boolean | Prisma.VehicleAssignmentCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["vehicleAssignment"]>
 
@@ -1035,9 +1035,9 @@ export type VehicleAssignmentSelectCreateManyAndReturn<ExtArgs extends runtime.T
   notes?: boolean
   createdAt?: boolean
   updatedAt?: boolean
+  driver?: boolean | Prisma.DriverDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
-  driver?: boolean | Prisma.DriverDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["vehicleAssignment"]>
 
 export type VehicleAssignmentSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -1051,9 +1051,9 @@ export type VehicleAssignmentSelectUpdateManyAndReturn<ExtArgs extends runtime.T
   notes?: boolean
   createdAt?: boolean
   updatedAt?: boolean
+  driver?: boolean | Prisma.DriverDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
-  driver?: boolean | Prisma.DriverDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["vehicleAssignment"]>
 
 export type VehicleAssignmentSelectScalar = {
@@ -1071,30 +1071,30 @@ export type VehicleAssignmentSelectScalar = {
 
 export type VehicleAssignmentOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "organizationId" | "vehicleId" | "driverId" | "status" | "startDate" | "endDate" | "notes" | "createdAt" | "updatedAt", ExtArgs["result"]["vehicleAssignment"]>
 export type VehicleAssignmentInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  shipments?: boolean | Prisma.VehicleAssignment$shipmentsArgs<ExtArgs>
+  driver?: boolean | Prisma.DriverDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
-  driver?: boolean | Prisma.DriverDefaultArgs<ExtArgs>
-  shipments?: boolean | Prisma.VehicleAssignment$shipmentsArgs<ExtArgs>
   _count?: boolean | Prisma.VehicleAssignmentCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type VehicleAssignmentIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  driver?: boolean | Prisma.DriverDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
-  driver?: boolean | Prisma.DriverDefaultArgs<ExtArgs>
 }
 export type VehicleAssignmentIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  driver?: boolean | Prisma.DriverDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   vehicle?: boolean | Prisma.VehicleDefaultArgs<ExtArgs>
-  driver?: boolean | Prisma.DriverDefaultArgs<ExtArgs>
 }
 
 export type $VehicleAssignmentPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "VehicleAssignment"
   objects: {
+    shipments: Prisma.$ShipmentPayload<ExtArgs>[]
+    driver: Prisma.$DriverPayload<ExtArgs>
     organization: Prisma.$OrganizationPayload<ExtArgs>
     vehicle: Prisma.$VehiclePayload<ExtArgs>
-    driver: Prisma.$DriverPayload<ExtArgs>
-    shipments: Prisma.$ShipmentPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1501,10 +1501,10 @@ readonly fields: VehicleAssignmentFieldRefs;
  */
 export interface Prisma__VehicleAssignmentClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
+  shipments<T extends Prisma.VehicleAssignment$shipmentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.VehicleAssignment$shipmentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ShipmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  driver<T extends Prisma.DriverDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.DriverDefaultArgs<ExtArgs>>): Prisma.Prisma__DriverClient<runtime.Types.Result.GetResult<Prisma.$DriverPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   organization<T extends Prisma.OrganizationDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.OrganizationDefaultArgs<ExtArgs>>): Prisma.Prisma__OrganizationClient<runtime.Types.Result.GetResult<Prisma.$OrganizationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   vehicle<T extends Prisma.VehicleDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.VehicleDefaultArgs<ExtArgs>>): Prisma.Prisma__VehicleClient<runtime.Types.Result.GetResult<Prisma.$VehiclePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  driver<T extends Prisma.DriverDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.DriverDefaultArgs<ExtArgs>>): Prisma.Prisma__DriverClient<runtime.Types.Result.GetResult<Prisma.$DriverPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  shipments<T extends Prisma.VehicleAssignment$shipmentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.VehicleAssignment$shipmentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ShipmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.

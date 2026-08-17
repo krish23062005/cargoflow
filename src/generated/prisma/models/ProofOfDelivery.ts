@@ -272,8 +272,8 @@ export type ProofOfDeliveryWhereInput = {
   locationLng?: Prisma.FloatNullableFilter<"ProofOfDelivery"> | number | null
   capturedByName?: Prisma.StringNullableFilter<"ProofOfDelivery"> | string | null
   capturedAt?: Prisma.DateTimeFilter<"ProofOfDelivery"> | Date | string
-  shipment?: Prisma.XOR<Prisma.ShipmentScalarRelationFilter, Prisma.ShipmentWhereInput>
   organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
+  shipment?: Prisma.XOR<Prisma.ShipmentScalarRelationFilter, Prisma.ShipmentWhereInput>
 }
 
 export type ProofOfDeliveryOrderByWithRelationInput = {
@@ -289,8 +289,8 @@ export type ProofOfDeliveryOrderByWithRelationInput = {
   locationLng?: Prisma.SortOrderInput | Prisma.SortOrder
   capturedByName?: Prisma.SortOrderInput | Prisma.SortOrder
   capturedAt?: Prisma.SortOrder
-  shipment?: Prisma.ShipmentOrderByWithRelationInput
   organization?: Prisma.OrganizationOrderByWithRelationInput
+  shipment?: Prisma.ShipmentOrderByWithRelationInput
 }
 
 export type ProofOfDeliveryWhereUniqueInput = Prisma.AtLeast<{
@@ -309,8 +309,8 @@ export type ProofOfDeliveryWhereUniqueInput = Prisma.AtLeast<{
   locationLng?: Prisma.FloatNullableFilter<"ProofOfDelivery"> | number | null
   capturedByName?: Prisma.StringNullableFilter<"ProofOfDelivery"> | string | null
   capturedAt?: Prisma.DateTimeFilter<"ProofOfDelivery"> | Date | string
-  shipment?: Prisma.XOR<Prisma.ShipmentScalarRelationFilter, Prisma.ShipmentWhereInput>
   organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
+  shipment?: Prisma.XOR<Prisma.ShipmentScalarRelationFilter, Prisma.ShipmentWhereInput>
 }, "id">
 
 export type ProofOfDeliveryOrderByWithAggregationInput = {
@@ -362,8 +362,8 @@ export type ProofOfDeliveryCreateInput = {
   locationLng?: number | null
   capturedByName?: string | null
   capturedAt?: Date | string
-  shipment: Prisma.ShipmentCreateNestedOneWithoutProofsInput
   organization: Prisma.OrganizationCreateNestedOneWithoutProofsInput
+  shipment: Prisma.ShipmentCreateNestedOneWithoutProofsInput
 }
 
 export type ProofOfDeliveryUncheckedCreateInput = {
@@ -392,8 +392,8 @@ export type ProofOfDeliveryUpdateInput = {
   locationLng?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   capturedByName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   capturedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  shipment?: Prisma.ShipmentUpdateOneRequiredWithoutProofsNestedInput
   organization?: Prisma.OrganizationUpdateOneRequiredWithoutProofsNestedInput
+  shipment?: Prisma.ShipmentUpdateOneRequiredWithoutProofsNestedInput
 }
 
 export type ProofOfDeliveryUncheckedUpdateInput = {
@@ -854,8 +854,8 @@ export type ProofOfDeliverySelect<ExtArgs extends runtime.Types.Extensions.Inter
   locationLng?: boolean
   capturedByName?: boolean
   capturedAt?: boolean
-  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["proofOfDelivery"]>
 
 export type ProofOfDeliverySelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -871,8 +871,8 @@ export type ProofOfDeliverySelectCreateManyAndReturn<ExtArgs extends runtime.Typ
   locationLng?: boolean
   capturedByName?: boolean
   capturedAt?: boolean
-  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["proofOfDelivery"]>
 
 export type ProofOfDeliverySelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -888,8 +888,8 @@ export type ProofOfDeliverySelectUpdateManyAndReturn<ExtArgs extends runtime.Typ
   locationLng?: boolean
   capturedByName?: boolean
   capturedAt?: boolean
-  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["proofOfDelivery"]>
 
 export type ProofOfDeliverySelectScalar = {
@@ -909,23 +909,23 @@ export type ProofOfDeliverySelectScalar = {
 
 export type ProofOfDeliveryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "organizationId" | "shipmentId" | "photos" | "signature" | "recipientName" | "recipientPhone" | "notes" | "locationLat" | "locationLng" | "capturedByName" | "capturedAt", ExtArgs["result"]["proofOfDelivery"]>
 export type ProofOfDeliveryInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
 }
 export type ProofOfDeliveryIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
 }
 export type ProofOfDeliveryIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
+  shipment?: boolean | Prisma.ShipmentDefaultArgs<ExtArgs>
 }
 
 export type $ProofOfDeliveryPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "ProofOfDelivery"
   objects: {
-    shipment: Prisma.$ShipmentPayload<ExtArgs>
     organization: Prisma.$OrganizationPayload<ExtArgs>
+    shipment: Prisma.$ShipmentPayload<ExtArgs>
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1334,8 +1334,8 @@ readonly fields: ProofOfDeliveryFieldRefs;
  */
 export interface Prisma__ProofOfDeliveryClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  shipment<T extends Prisma.ShipmentDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ShipmentDefaultArgs<ExtArgs>>): Prisma.Prisma__ShipmentClient<runtime.Types.Result.GetResult<Prisma.$ShipmentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   organization<T extends Prisma.OrganizationDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.OrganizationDefaultArgs<ExtArgs>>): Prisma.Prisma__OrganizationClient<runtime.Types.Result.GetResult<Prisma.$OrganizationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  shipment<T extends Prisma.ShipmentDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ShipmentDefaultArgs<ExtArgs>>): Prisma.Prisma__ShipmentClient<runtime.Types.Result.GetResult<Prisma.$ShipmentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
